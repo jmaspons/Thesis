@@ -1,0 +1,201 @@
+% TODO: references to figure 1 from chapter 3
+%************************************************
+\chapter[Appendix 3.1: Chapter 3 - Model description and parameterization]{Appendix 3.1: Chapter 3 - Model description and parameterization}\label{ch:Appendix3.1}
+%************************************************
+\renewcommand{\thefigure}{A.3.1.\arabic{figure}}
+\setcounter{figure}{0}
+
+\renewcommand{\thetable}{A.3.1.\arabic{table}}
+\setcounter{table}{0}
+
+\section*{Description of the stochastic population model}\label{model-description}
+
+At any temporal point in a given simulation run the population is described by a
+cohort of juveniles, sub-adults at all stages, non-breeding adults (i.e. those
+that skip breeding) and failed and successful adult breeders. Those individuals
+may belong to one of the two habitats that typify our simulated scenario. Growth
+from one stage to the next one, shift between habitats and the birth and
+establishment of new individuals are all computed by stochastically drawing from
+corresponding binomial distributions. See Figure \ref{fig:figApp3.2.1} for a graphic overview of
+all possible state transitions and Table \ref{tab:tabApp3.1.1} for parameters definition.
+
+\begin{enumerate}
+  \item The first calculation, for a given temporal step $t$ and for each
+habitat, is to calculate how many full adults will become non-breeders and how
+many will be (successful or failed) breeders:
+    \begin{equation*}
+      A_{h,t}^{b} = Bin \left( {A}_{h,t} , {p}_{h}^{b} \right)
+    \end{equation*}
+
+  \item Then, we enter the breeding algorithm, which runs recursively $m$ times
+within a loop. Within this loop only juvenile recruitment and survival, as well 
+as habitat shift for successful and failed adult breeders are evaluated.
+  \begin{enumerate}
+    \item Within the loop, at the beginning of a given brooding event $i$, the
+number of adults that breed successfully is decided for each habitat by randomly
+drawing from a binomial distribution:
+      \begin{equation*}
+        A_{h,t}^{b_{s}} = Bin \left( {A}_{h,t}^{b} , 1 - {p}_{h}^{b_{f}} \right)
+      \end{equation*}
+    \item That, in turn, allows us to calculate the number of adults that fail 
+to breed:
+      \begin{equation*}
+        A_{h,t}^{b_{f}} = A_{h,t}^{b} - A_{h,t}^{b_{s}}
+      \end{equation*}
+    \item Then, the number of juveniles that are bred and survive until the 
+next year are updated at each loop step as:
+      \begin{equation*}
+        {J}_{h,t} = {J}_{h,t} + Bin \left( {A}_{h,t}^{{b}_{s}} \cdot q, {p}_{h, 
+{S}_{j}} \right)
+      \end{equation*}
+    \item Next, after hatching has taken place, part of the successful or 
+failed adult population may move between habitats. We model those actions by 
+stochastically drawing from a binomial distribution the number of adults that 
+change habitat:
+      \begin{equation*}
+{\Delta}_{1\rightarrow2}^{x} =Bin \left({A}_{1,t}^{x} , {p}_{1\rightarrow2}^
+{x} \right)
+      \end{equation*}
+      \begin{equation*}
+{\Delta}_{2\rightarrow1}^{x} =Bin \left({A}_{2,t}^{x} , {p}_{2\rightarrow1}^
+{x} \right)
+      \end{equation*}
+Where, in this case, $x \in \{ {b}_{s} , {b}_{f} \}$.
+    \item Then, the number of successful and failed breeders will be updated:
+      \begin{equation*}
+{A}_{1,t}^{x} = {A}_{1,t}^{x} - {\Delta}_{1\rightarrow2}^{x} +
+{\Delta}_{2\rightarrow1}^{x}
+      \end{equation*}
+      \begin{equation*}
+{A}_{2,t}^{x} = {A}_{2,t}^{x} - {\Delta}_{2\rightarrow1}^{x} +
+{\Delta}_{1\rightarrow2}^{x}
+      \end{equation*}
+    And thus, with the new calculation:
+      \begin{equation*}
+{A}_{1,t}^{b} = {A}_{1,t}^{{b}_{s}} + {A}_{1,t}^{{b}_{f}}
+    \end{equation*}
+    \begin{equation*}
+{A}_{2,t}^{b} = {A}_{2,t}^{{b}_{s}} + {A}_{2,t}^{{b}_{f}}
+      \end{equation*}
+    Then the algorithm goes back to point a) above $m$ times, after which it 
+jumps from e) above to point 3 just below.
+  \end{enumerate}
+  \item When the simulation includes sub-adults (i.e. age of first reproduction 
+\textgreater{1}), we must account for the fact that they may also move between habitats:
+    \begin{equation*}
+{\Delta}_{1\rightarrow2}^{r} =Bin \left({S}_{1,t}^{r} , {p}_{1\rightarrow2}^{r}
+\right)
+    \end{equation*}
+    \begin{equation*}
+{\Delta}_{1\rightarrow2}^{r} =Bin \left({S}_{2,t}^{r} , {p}_{2\rightarrow1}^{r}
+\right)
+    \end{equation*}
+  \item Moreover, sub-adults are also affected by survival, which is modeled by 
+stochastically drawing from a binomial distribution:
+    \begin{equation*}
+{S}_{1,t+1}^{r} =Bin \left({S}_{1,t+1}^{r} - {\Delta}_{1\rightarrow2}^{r} +
+{\Delta}_{2\rightarrow1}^{r} , {p}_{1, {S}_{sa}} \right)
+    \end{equation*}
+    \begin{equation*}
+{S}_{2,t+1}^{r} =Bin \left({S}_{2,t+1}^{r} - {\Delta}_{2\rightarrow1}^{r} +
+{\Delta}_{1\rightarrow2}^{r} , {p}_{{2,S}_{sa}} \right)
+    \end{equation*}
+  \item Then, we also allow non-breeders to change habitats by stochastically 
+drawing from a binomial distribution:
+    \begin{equation*}
+{\Delta}_{1\rightarrow2,t}^{nb} = Bin \left({A}_{1,t}^{nb},
+{p}_{1\rightarrow2}^{nb} \right)
+    \end{equation*}
+    \begin{equation*}
+{\Delta}_{2\rightarrow1,t}^{nb} = Bin \left({A}_{1,t}^{nb},
+{p}_{2\rightarrow1}^{nb} \right)
+    \end{equation*}
+  \item Consequently, the population at $t+1$ of those non-breeding adults must 
+be updated as follows:
+    \begin{equation*}
+{A}_{1,t+1}^{nb} = {A}_{1,t}^{nb} - {\Delta}_{1\rightarrow2}^{nb} +
+{\Delta}_{2\rightarrow1}^{nb}
+    \end{equation*}
+    \begin{equation*}
+{A}_{2,t+1}^{nb} = {A}_{2,t}^{nb} - {\Delta}_{2\rightarrow1}^{nb} +
+{\Delta}_{1\rightarrow2}^{nb}
+    \end{equation*}
+  \item Next, we account for survival probability of all types of adults:
+    \begin{equation*}
+{A}_{h,t+1}^{x} =Bin \left({A}_{h,t+1}^{x} , {p}_{h, {S}_{x}} \right)
+    \end{equation*}
+  where, in this case, $x \in \{ {b}_{s}, {b}_{f}, nb \}$. Values
+${A}_{h,t+1}^{x}$ inside the binomial correspond to those at the end of the
+breeding loop when $x=b_{s}$ or $x=b_{f}$.
+  \item Total adult population is then:
+    \begin{equation*}
+{A}_{h,t+1} = \sum_{x \in \{ {b}_{s}, {b}_{f}, nb \}} {{A}_{h,t+1}^{x}}
+    \end{equation*}
+  \item Finally, populations are updated simply by moving up one stage and 
+juveniles become adults or sub-adults according to the age of first 
+reproduction.
+\end{enumerate}
+
+
+\section*{Exploration of the parameter space}\label{model-exploration}
+
+The range of demographic parameters comes from empirical data from birds. With 
+the chosen parameters we estimated juvenile survival $p_{1,s}$ for a given 
+deterministic growth rate $\lambda$ corresponding to the Leslie matrix model by
+solving the Euler-Lotka equation:
+
+\begin{equation*}
+{p}_{1, {S}_{j}} = \frac {{{p}_{1, {S}_{sa}}} ^ {1-AFR} \left({\lambda}^{1+AFR}
+- {p}_{1, {S}_{b}} \cdot {\lambda} ^ {AFR} \right)} {q \cdot \lambda}
+\end{equation*}
+
+where $AFR$ is the age at first reproduction and other notation follows Table
+\ref{tab:tabApp3.1.1}. Once demographic parameters in habitat 1 are defined we
+modify the habitat 2 parameters according to the different scenarios. In
+Scenario 1, the parameters in habitat 2 are the same than in habitat 1. In
+Scenario 2 we increase adult and subadult mortality $n$ times (1.5 in Scenario
+2.1 and 2 in Scenario 2.2). To increase $p$ probabilities $n$ times we apply
+$p^{n}$ and therefore, adult survival in habitat 2 is:
+\begin{equation*}
+{p}_{2, {S}_{b}} =1- {\left(1- {p}_{1, {S}_{b}} \right)}^{{1} / {n}}
+\end{equation*}
+
+For Scenario 3 we apply the increase in breeding fail as follows:
+
+\begin{equation*}
+{p}_{2}^{{b}_{f}} =1- {\left(1- {p}_{1}^{{b}_{f}} \right)}^{{1} / {n}}
+\end{equation*}
+
+\clearpage
+
+
+\begin{table}
+\caption[Notation]{Notation followed to describe the stochastic population model.}\label{tab:tabApp3.1.1}
+\begin{tabular}[b]{@{}p{1.5cm}p{13cm}@{}}
+\toprule
+\textbf{Symbol} & \textbf{Definition}                                                                                                                                                                                             \\ \midrule
+$q$   & Number of offsprings per brood in habitat $h$                                                                                                                                                                             \\
+$m$   & Number of broods per year                                                                                                                                                                                                 \\
+${n}_{Sa}$        & Number of sub-adult stages                                                                                                                                                                                    \\
+$x$   & Labels $x$ may take the values $j, sa, b, nb, b_{s}, b_{f}$, where these values refer to juveniles, subadults, adults (i.e. sum of all types), non-breeding adults, successful breeders and failed breeders, respectively \\
+$h$   & Index for habitat type, $h=\{1, 2\}$                                                                                                                                                                                      \\
+$r$   & Label for subadult stage, $r \in \{r_{1} \cdots r_{n_{Sa}}\}$                                                                                                                                                             \\
+$t$   & Subindex for time steps, measured in years, $t= \{1 \cdots 50\}$                                                                                                                                                          \\
+${p}_{h}^{b}$     & Probability for an individual to become a breeder (successful or not) in habitat $h$                                                                                                                          \\
+${p}_{h}^{b_{f}}$ & Probability for a possible breeder individual to be a failed breeder in habitat $h$                                                                                                                           \\
+${p}_{h,S_{x}}$   & Probability of survival in habitat $h$ for individuals $x$                                                                                                                                                    \\
+\noalign{\bigskip}
+${p}_{1\rightarrow2}^{x}$ \\ ${p}_{2\rightarrow1}^{x}$ & Probability for an adult to move from habitat type 1 to 2, or vice versa                                                                                                 \\
+\noalign{\bigskip}
+${p}_{1\rightarrow2}^{r}$ \\ ${p}_{2\rightarrow1}^{r}$ & Probability for a stage-r subadult to move from habitat type 1 to 2, or vice versa                                                                                       \\
+\noalign{\smallskip}
+${J}_{h,t}$       & Number of juveniles that have born in habitat $h$ at time step $t$                                                                                                                                            \\
+${S}_{h,t}^{r}$   & Number of stage-$r$ subadults in habitat $h$ in year $t$                                                                                                                                                      \\
+${A}_{h,t}$       & Total number of adults in habitat $h$ at time $t$                                                                                                                                                             \\
+${A}_{h,t}^{x}$   & Number of adults of type $x$ in habitat $h$ at time step $t$                                                                                                                                                  \\
+\noalign{\bigskip}
+${\Delta}_{1\rightarrow2}^{x}$ \\ ${\Delta}_{2\rightarrow1}^{x}$   & Number of adults that will move from habitat type 1 to habitat 2, or viceversa                                                                               \\
+\noalign{\smallskip}
+${\Delta}_{1\rightarrow2}^{r}$ \\ ${\Delta}_{2\rightarrow1}^{r}$   & Number of sub-adults that will move from habitat type 1 to habitat 2, or viceversa                                                                           \\ \bottomrule
+\end{tabular}
+\end{table}
