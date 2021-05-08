@@ -1,4 +1,5 @@
-% TODO: Clean or remove table tab:tabApp2.1.1
+% TODO: Clean or remove table about references tab:tabApp2.1.1
+% TODO: maxN nomenclature -> extended LH dataset
 %************************************************
 \chapter[Appendix 2.1: Chapter 2 - Supplementary materials]{Appendix 2.1: Chapter 2 - Supplementary materials}\label{ch:Appendix2.1}
 %************************************************
@@ -9,7 +10,7 @@
 \renewcommand{\thetable}{A.2.1.\arabic{table}}
 \setcounter{table}{0}
 
-% \section*{Articles describing life history axes}
+\section*{Supplementary tables}
 
 % \afterpage{
 % \clearpage% Flush earlier floats (otherwise order might not be correct)
@@ -76,58 +77,595 @@
 % }
 
 
-
-\begin{table}
+% \clearpage% Flush earlier floats (otherwise order might not be correct)
+\begin{table}[ht!]
 \center
-\caption[Species' concentration and hypervolumes]{The world's bird species are
-concentrated in nine-trait space as compared to expectations under theoretical
-null models and fills a much more restricted hypervolume. Minimum number of 
-cells within nine-trait multivariate space (divided in $10^{6}$ cells) needed to
-cover 10\% (N10) or 50\% (N50) of species in the observed hypervolume 
-($Hv_{obs}$) and in four different null-model simulated hypervolumes 
-($Hv_{nm1-4}$) and the volume of each hypervolume (the mean of the 999 
-permutations for $Hv_{nm}$). See main text for details.}
+\caption[FS PCs models]{
+Characteristics of the models used to select the PCs that better describe the
+generation time or elasticity of the adult survival. This models are used to
+define the fast-slow axes averaging and AIC weighting the PCs from the models
+predicting the elasticity of the adult survival (Fse) or generation time (Fgt)
+for each dataset and phylogeny. Columns describe the number of PCs included (n
+PCs), the variance explained by the PCs (PCvarExp), number of traits included in
+the PPCAs and the adjusted $R^{2}$ of the models predicting the elasticity of
+the adult survival or the generation time. Best AIC models include only the PCs
+with $\Delta AIC < 2$. The values with variability among PCs are reported as the
+mean $\pm$ standard deviation. See the ESM for the complete data for all the
+models.
+}
 \label{tab:tabApp2.1.1}
-\begin{tabular}[b]{@{}lccc@{}}
+\begin{tabular}{@{}lllllll@{}}
 \toprule
-\textbf{Hypervolume} & \textbf{N10} & \textbf{N50} & \textbf{Volume} \\
+Axis & Phylogeny & Dataset & n PCs & PCvarExp & n traits & adjusted $R^{2}$\\
 \midrule
-$Hv_{obs}$  & 9   & 71  & 4.3 \\
-$Hv_{nm1}$  & 131 & 354 & 1030450 \\
-$Hv_{nm2}$  & 131 & 397 & 10808.4 \\
-$Hv_{nm3}$  & 131 & 394 & 8187 \\
-$Hv_{nm4}$  & 131 & 312 & 30.6 \\
+\multirow{4}{*}{FSe} & \multirow{2}{*}{Ericson} & maxN & $7616$ & $0.34\pm0.08$ & $7.29\pm1.51$ & $0.36\pm0.11$\\
+ &  & restricSet & $7616$ & $0.35\pm0.07$ & $7.29\pm1.51$ & $0.36\pm0.11$\\
+ & \multirow{2}{*}{Hackett}& maxN & $7616$ & $0.35\pm0.07$ & $7.29\pm1.51$ & $0.36\pm0.11$\\
+ &  & restricSet & $7616$ & $0.35\pm0.07$ & $7.29\pm1.51$ & $0.36\pm0.11$\\
+\addlinespace
+\multirow{4}{*}{FSe bestAIC} & \multirow{2}{*}{Ericson} & maxN & $61$ & $0.28\pm0.05$ & $6.02\pm1.09$ & $0.55\pm0.01$\\
+ &  & restricSet & $59$ & $0.28\pm0.05$ & $6\pm1.11$ & $0.55\pm0.01$\\
+ & \multirow{2}{*}{Hackett} & maxN & $55$ & $0.28\pm0.05$ & $5.98\pm1.13$ & $0.55\pm0.01$\\
+ &  & restricSet & $103$ & $0.3\pm0.05$ & $5.91\pm1.2$ & $0.55\pm0.01$\\
+\addlinespace
+\multirow{4}{*}{FSgt} & \multirow{2}{*}{Ericson} & maxN & $7616$ & $0.34\pm0.08$ & $7.29\pm1.51$ & $0.39\pm0.06$\\
+ &  & restricSet & $7616$ & $0.35\pm0.08$ & $7.29\pm1.51$ & $0.39\pm0.06$\\
+ & \multirow{2}{*}{Hackett} & maxN & $7616$ & $0.35\pm0.08$ & $7.29\pm1.51$ & $0.39\pm0.05$\\
+ &  & restricSet & $7616$ & $0.35\pm0.07$ & $7.29\pm1.51$ & $0.39\pm0.05$\\
+\addlinespace
+\multirow{4}{*}{FSgt bestAIC} & \multirow{2}{*}{Ericson} & maxN & $515$ & $0.33\pm0.07$ & $6.27\pm1.29$ & $0.48\pm0.01$\\
+ &  & restricSet & $499$ & $0.33\pm0.06$ & $6.26\pm1.28$ & $0.48\pm0.01$\\
+ & \multirow{2}{*}{Hackett} & maxN & $497$ & $0.33\pm0.07$ & $6.23\pm1.27$ & $0.48\pm0.01$\\
+ &  & restricSet & $468$ & $0.34\pm0.06$ & $6.24\pm1.28$ & $0.48\pm0.01$\\
 \bottomrule
 \end{tabular}
 \end{table}
 
 
+\clearpage% Flush earlier floats (otherwise order might not be correct)
+\begin{landscape}% Landscape page
 \begin{table}
 \center
-\caption[FS PCs]{
-
+\caption[LHT loadings of the FS axes]{
+Mean $\pm$ standard deviation AIC weighted loadings of the traits for the
+fast-slow axes based on models predicting generation time (FSgt) or elasticity
+of adult survival (FSe) for all trait combination PCs o using only the PCs with
+AIC \textless{2} (best AIC).
 }
 \label{tab:tabApp2.1.2}
-\begin{tabular}[b]{@{}lccc@{}}
-\toprule
-\textbf{Hypervolume} & \textbf{N10} & \textbf{N50} & \textbf{Volume}\\
-\midrule
+\begin{footnotesize}
 
+\textbf{Phylogeny based on Ericson backbone}
+
+\begin{tabular}{@{}l|rrrr|rrrr@{}}
+\toprule
+  & \multicolumn{4}{c|}{Restricted Set} & \multicolumn{4}{c}{Max N Set}\\
+  & FSe & FSe best AIC & FSgt & FSgt best AIC & FSe & FSe best AIC & FSgt & FSgt best AIC\\
+\midrule
+CS & $-0.44 \pm 0.3$ & $-0.62 \pm 0.16$ & $-0.4 \pm 0.32$ & $-0.54 \pm 0.31$ & $-0.43 \pm 0.31$ & $-0.6 \pm 0.26$ & $-0.39 \pm 0.33$ & $-0.53 \pm 0.33$\\
+FEC & $-0.3 \pm 0.32$ & $-0.29 \pm 0.21$ & $-0.39 \pm 0.33$ & $-0.45 \pm 0.32$ & $-0.29 \pm 0.32$ & $-0.28 \pm 0.28$ & $-0.39 \pm 0.33$ & $-0.45 \pm 0.31$\\
+I & $0.18 \pm 0.42$ & $0.01$ & $0.33 \pm 0.42$ & $0.36 \pm 0.39$ & $0.18 \pm 0.42$ & $0$ & $0.33 \pm 0.42$ & $0.36 \pm 0.39$\\
+DP & $0.19 \pm 0.44$ & $0.01$ & $0.25 \pm 0.44$ & $0.14 \pm 0.35$ & $0.18 \pm 0.45$ & $0.02 \pm 0.02$ & $0.24 \pm 0.45$ & $0.14 \pm 0.38$\\
+AFB & $0.24 \pm 0.31$ & $0.27 \pm 0.09$ & $0.26 \pm 0.33$ & $0.26 \pm 0.33$ & $0.23 \pm 0.32$ & $0.25 \pm 0.26$ & $0.26 \pm 0.33$ & $0.25 \pm 0.33$\\
+FLE & $0.2 \pm 0.39$ & $0.15 \pm 0.06$ & $0.19 \pm 0.42$ & $0.08 \pm 0.38$ & $0.2 \pm 0.39$ & $0.13 \pm 0.06$ & $0.19 \pm 0.43$ & $0.08 \pm 0.39$\\
+PRO & $-0.12 \pm 0.36$ & $-0.05 \pm 0.17$ & $-0.12 \pm 0.39$ & $0$ & $-0.11 \pm 0.36$ & $-0.05 \pm 0.18$ & $-0.11 \pm 0.4$ & $0$\\
+EMR & $0.25 \pm 0.26$ & $0.48 \pm 0.13$ & $0.23 \pm 0.27$ & $0.34 \pm 0.27$ & $0.24 \pm 0.27$ & $0.43 \pm 0.22$ & $0.23 \pm 0.27$ & $0.33 \pm 0.27$\\
+BM & $0.04 \pm 0.53$ & $0$ & $0.05 \pm 0.54$ & $0 \pm 0.03$ & $0.04 \pm 0.53$ & $0$ & $0.05 \pm 0.54$ & $0 \pm 0.01$\\
+OV & $0 \pm 0.37$ & $-0.02 \pm 0.21$ & $0.07 \pm 0.38$ & $0.11 \pm 0.33$ & $0 \pm 0.36$ & $-0.02 \pm 0.2$ & $0.07 \pm 0.37$ & $0.11 \pm 0.31$\\
+BV & $-0.12 \pm 0.53$ & $-0.35 \pm 0.23$ & $-0.02 \pm 0.49$ & $0.02 \pm 0.48$ & $0.17 \pm 0.54$ & $0.21 \pm 0.36$ & $0.09 \pm 0.52$ & $0.04 \pm 0.48$\\
+LFS & $0.18 \pm 0.54$ & $0.23 \pm 0.24$ & $0.09 \pm 0.52$ & $0.04 \pm 0.48$ & $-0.11 \pm 0.53$ & $-0.28 \pm 0.37$ & $-0.01 \pm 0.48$ & $0.04 \pm 0.46$\\
+RLS & $0.17 \pm 0.52$ & $0.2 \pm 0.25$ & $0.09 \pm 0.5$ & $0.06 \pm 0.46$ & $0.16 \pm 0.52$ & $0.17 \pm 0.38$ & $0.08 \pm 0.5$ & $0.03 \pm 0.45$\\
+PEP & $0.05 \pm 0.38$ & $0.18 \pm 0.22$ & $-0.04 \pm 0.39$ & $-0.03 \pm 0.24$ & $0.05 \pm 0.38$ & $0.16 \pm 0.22$ & $-0.04 \pm 0.38$ & $-0.02 \pm 0.24$\\
+\bottomrule
+\end{tabular}
+
+\textbf{Phylogeny based on Hackett backbone}
+
+\begin{tabular}{@{}l|rrrr|rrrr@{}}
+\toprule
+  & \multicolumn{4}{c|}{Restricted Set} & \multicolumn{4}{c}{Max N Set}\\
+  & FSe & FSe best AIC & FSgt & FSgt best AIC & FSe & FSe best AIC & FSgt & FSgt best AIC\\
+\midrule
+CS & $-0.43 \pm 0.32$ & $-0.6 \pm 0.23$ & $-0.4 \pm 0.33$ & $-0.54 \pm 0.33$ & $-0.43 \pm 0.32$ & $-0.6 \pm 0.24$ & $-0.39 \pm 0.34$ & $-0.53 \pm 0.34$\\
+FEC & $-0.29 \pm 0.33$ & $-0.26 \pm 0.27$ & $-0.39 \pm 0.34$ & $-0.45 \pm 0.33$ & $-0.29 \pm 0.32$ & $-0.28 \pm 0.26$ & $-0.39 \pm 0.33$ & $-0.44 \pm 0.33$\\
+I & $0.19 \pm 0.42$ & $0.02 \pm 0.07$ & $0.33 \pm 0.41$ & $0.37 \pm 0.38$ & $0.18 \pm 0.42$ & $0$ & $0.33 \pm 0.42$ & $0.35 \pm 0.4$\\
+DP & $0.19 \pm 0.45$ & $0.06 \pm 0.06$ & $0.25 \pm 0.44$ & $0.14 \pm 0.37$ & $0.18 \pm 0.45$ & $0.01$ & $0.25 \pm 0.45$ & $0.13 \pm 0.41$\\
+AFB & $0.24 \pm 0.32$ & $0.25 \pm 0.09$ & $0.26 \pm 0.34$ & $0.26 \pm 0.34$ & $0.23 \pm 0.32$ & $0.27 \pm 0.2$ & $0.26 \pm 0.35$ & $0.25 \pm 0.37$\\
+FLE & $0.2 \pm 0.39$ & $0.16 \pm 0.19$ & $0.19 \pm 0.42$ & $0.07 \pm 0.38$ & $0.2 \pm 0.39$ & $0.11 \pm 0.33$ & $0.2 \pm 0.41$ & $0.08 \pm 0.38$\\
+PRO & $-0.12 \pm 0.36$ & $-0.04 \pm 0.16$ & $-0.12 \pm 0.37$ & $0$ & $-0.11 \pm 0.36$ & $-0.06 \pm 0.18$ & $-0.12 \pm 0.39$ & $0$\\
+EMR & $0.25 \pm 0.28$ & $0.45 \pm 0.18$ & $0.23 \pm 0.28$ & $0.34 \pm 0.29$ & $0.24 \pm 0.27$ & $0.45 \pm 0.2$ & $0.23 \pm 0.28$ & $0.33 \pm 0.29$\\
+BM & $0.04 \pm 0.53$ & $0$ & $0.05 \pm 0.54$ & $0 \pm 0.01$ & $0.04 \pm 0.52$ & $0$ & $0.05 \pm 0.53$ & $0 \pm 0$\\
+OV & $0 \pm 0.38$ & $-0.01 \pm 0.2$ & $0.07 \pm 0.38$ & $0.12 \pm 0.34$ & $0.01 \pm 0.37$ & $-0.01 \pm 0.21$ & $0.08 \pm 0.36$ & $0.12 \pm 0.29$\\
+BV & $-0.11 \pm 0.55$ & $-0.3 \pm 0.36$ & $-0.01 \pm 0.5$ & $0.02 \pm 0.49$ & $0.17 \pm 0.55$ & $0.2 \pm 0.37$ & $0.1 \pm 0.52$ & $0.05 \pm 0.48$\\
+LFS & $0.17 \pm 0.56$ & $0.2 \pm 0.39$ & $0.09 \pm 0.53$ & $0.04 \pm 0.51$ & $-0.11 \pm 0.54$ & $-0.29 \pm 0.36$ & $-0.01 \pm 0.49$ & $0.03 \pm 0.47$\\
+RLS & $0.16 \pm 0.54$ & $0.21 \pm 0.24$ & $0.08 \pm 0.51$ & $0.04 \pm 0.48$ & $0.16 \pm 0.54$ & $0.19 \pm 0.26$ & $0.08 \pm 0.51$ & $0.02 \pm 0.46$\\
+PEP & $0.05 \pm 0.4$ & $0.16 \pm 0.23$ & $-0.05 \pm 0.39$ & $-0.03 \pm 0.25$ & $0.05 \pm 0.39$ & $0.15 \pm 0.24$ & $-0.04 \pm 0.39$ & $-0.03 \pm 0.25$\\
+\bottomrule
+\end{tabular}
+
+\end{footnotesize}
+\end{table}
+\end{landscape}% Landscape page
+
+
+
+
+
+\clearpage% Flush earlier floats (otherwise order might not be correct)
+% \begin{landscape}% Landscape page
+\begin{table}
+\center
+\caption[LHT relative importance of the FS axes]{
+Relative weight of the life history traits in the fast-slow continuum. Values
+range from -1 to 1, where negative values means that the absolute value of the
+trait loadings are lower than expected by the frequency of the trait and
+positive values for traits with higher loadings than expected by the frequency
+of the trait in the selected PPCAs (see main text for details). The loadings and
+frequencies come from selected PCs that better predict elasticities of the
+adult survival (FSe) or generation time (FSgt), weighted by the AIC based weight
+of the models taking all or only the models with $\Delta AIC < 2$ (best AIC).
+}
+\label{tab:tabApp2.1.3}
+\begin{footnotesize}
+
+\textbf{Phylogeny based on Ericson backbone}
+
+\begin{tabular}{@{}l|rrrr|rrrr@{}}
+\toprule
+  & \multicolumn{4}{c|}{Restricted Set} & \multicolumn{4}{c}{Max N Set}\\
+  & FSe & FSe best AIC & FSgt & FSgt best AIC & FSe & FSe best AIC & FSgt & FSgt best AIC\\
+\midrule
+CS & 0.05 & 0.05 & 0.05 & 0.09 & 0.05 & 0.06 & 0.05 & 0.09\\
+FEC & 0.03 & -0.01 & 0.05 & 0.07 & 0.03 & 0.00 & 0.05 & 0.08\\
+I & 0.02 & 0.00 & 0.04 & 0.04 & 0.02 & 0.00 & 0.04 & 0.05\\
+DP & 0.02 & 0.00 & 0.03 & 0.01 & 0.02 & 0.00 & 0.03 & 0.01\\
+AFB & 0.01 & 0.01 & 0.02 & 0.01 & 0.01 & 0.01 & 0.02 & 0.01\\
+FLE & 0.02 & 0.00 & 0.01 & 0.00 & 0.02 & 0.01 & 0.02 & -0.01\\
+PRO & 0.00 & -0.01 & 0.01 & 0.00 & 0.00 & -0.01 & 0.01 & 0.00\\
+EMR & 0.01 & 0.03 & 0.00 & 0.01 & 0.00 & 0.02 & 0.00 & 0.01\\
+BM & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00\\
+OV & -0.04 & -0.03 & -0.03 & -0.01 & -0.04 & -0.03 & -0.03 & -0.01\\
+BV & -0.02 & 0.01 & -0.05 & -0.06 & -0.01 & 0.01 & -0.05 & -0.08\\
+LFS & -0.01 & 0.01 & -0.05 & -0.08 & -0.02 & 0.00 & -0.05 & -0.05\\
+RLS & -0.01 & 0.01 & -0.05 & -0.07 & -0.01 & 0.00 & -0.05 & -0.08\\
+PEP & -0.06 & -0.07 & -0.04 & -0.02 & -0.06 & -0.07 & -0.04 & -0.03\\
+\bottomrule
+\end{tabular}
+
+\textbf{Phylogeny based on Hackett backbone}
+
+\begin{tabular}{@{}l|rrrr|rrrr@{}}
+\toprule
+  & \multicolumn{4}{c|}{Restricted Set} & \multicolumn{4}{c}{Max N Set}\\
+  & FSe & FSe best AIC & FSgt & FSgt best AIC & FSe & FSe best AIC & FSgt & FSgt best AIC\\
+\midrule
+CS & 0.05 & 0.05 & 0.05 & 0.09 & 0.05 & 0.06 & 0.05 & 0.09\\
+FEC & 0.03 & 0.00 & 0.05 & 0.07 & 0.03 & 0.00 & 0.05 & 0.08\\
+I & 0.02 & 0.00 & 0.04 & 0.05 & 0.02 & 0.00 & 0.04 & 0.04\\
+DP & 0.02 & 0.00 & 0.03 & 0.01 & 0.02 & 0.00 & 0.03 & 0.01\\
+AFB & 0.02 & 0.01 & 0.02 & 0.01 & 0.02 & 0.01 & 0.02 & 0.01\\
+FLE & 0.02 & 0.00 & 0.02 & -0.01 & 0.02 & -0.01 & 0.02 & 0.00\\
+PRO & 0.00 & -0.01 & 0.02 & 0.00 & 0.00 & -0.01 & 0.01 & 0.00\\
+EMR & 0.01 & 0.03 & -0.01 & 0.01 & 0.00 & 0.03 & -0.01 & 0.01\\
+BM & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00\\
+OV & -0.04 & -0.03 & -0.03 & -0.01 & -0.04 & -0.03 & -0.03 & -0.01\\
+BV & -0.02 & 0.01 & -0.05 & -0.05 & -0.01 & 0.01 & -0.05 & -0.07\\
+LFS & -0.01 & 0.00 & -0.05 & -0.08 & -0.02 & 0.00 & -0.05 & -0.05\\
+RLS & -0.02 & 0.01 & -0.05 & -0.08 & -0.02 & 0.01 & -0.05 & -0.09\\
+PEP & -0.06 & -0.07 & -0.04 & -0.02 & -0.06 & -0.08 & -0.04 & -0.02\\
+\bottomrule
+\end{tabular}
+
+\end{footnotesize}
+\end{table}
+% \end{landscape}% Landscape page
+
+\clearpage% Flush earlier floats (otherwise order might not be correct)
+% \begin{landscape}% Landscape page
+\begin{table}
+\center
+\caption[FS PCs models]{
+Characteristics of the PCs in each cluster defining other axes of life history
+variation. Columns describe the variance explained by the PCs (PCvarExp), number
+of traits included in the PPCAs (nTraits), the number of PCs (nPCs) and the
+main trait. The values with variability among PCs are reported as the mean
+$\pm$ standard deviation.
+%TODO: caption and update label from here on?
+}
+\label{tab:tabApp2.1.4}
+
+
+\begin{tabular}{lrrrl}
+\toprule
+Axis & PCvarExp & nTraits & nPCs & mainTrait\\
+\midrule
+\multicolumn{5}{@{}l@{}}{\textbf{Ericson-maxN}} \\
+\midrule
+grCor0.8\_23 & $0.15 \pm 0.03$ & $7.81 \pm 1.36$ & 756 & EMR\\
+grCor0.7\_21 & $0.14 \pm 0.02$ & $8.1 \pm 1.23$ & 828 & EMR\\
+grCor0.8\_31 & $0.14 \pm 0.02$ & $8.27 \pm 1.22$ & 623 & EMR\\
+grCor0.75\_7 & $0.4 \pm 0.06$ & $7.33 \pm 1.37$ & 529 & PEP\\
+grCor0.7\_11 & $0.36 \pm 0.09$ & $7.41 \pm 1.4$ & 780 & PEP\\
+grCor0.8\_63 & $0.41 \pm 0.09$ & $7.71 \pm 1.51$ & 591 & PEP\\
+grCor0.7\_30 & $0.37 \pm 0.1$ & $7.53 \pm 1.49$ & 521 & RLS\\
+grCor0.75\_1 & $0.4 \pm 0.1$ & $7.42 \pm 1.38$ & 577 & BV\\
+\midrule
+\addlinespace
+\multicolumn{5}{@{}l@{}}{\textbf{Ericson-uniqueSpsSet}} \\
+\midrule
+grCor0.7\_19 & $0.15 \pm 0.03$ & $7.72 \pm 1.4$ & 487 & EMR\\
+grCor0.7\_17 & $0.15 \pm 0.03$ & $7.65 \pm 1.27$ & 736 & EMR\\
+grCor0.8\_22 & $0.15 \pm 0.03$ & $7.7 \pm 1.32$ & 601 & EMR\\
+grCor0.8\_5 & $0.39 \pm 0.06$ & $7.47 \pm 1.41$ & 674 & PEP\\
+grCor0.7\_1 & $0.38 \pm 0.1$ & $7.47 \pm 1.44$ & 649 & BV\\
+grCor0.75\_1 & $0.38 \pm 0.1$ & $7.63 \pm 1.39$ & 546 & BV\\
+grCor0.7\_13 & $0.36 \pm 0.09$ & $7.53 \pm 1.36$ & 793 & PEP\\
+grCor0.8\_60 & $0.41 \pm 0.09$ & $7.77 \pm 1.47$ & 623 & PEP\\
+\midrule
+\addlinespace
+\multicolumn{5}{@{}l@{}}{\textbf{Hackett-maxN}} \\
+\midrule
+grCor0.8\_25 & $0.15 \pm 0.03$ & $7.89 \pm 1.31$ & 645 & EMR\\
+grCor0.85\_31 & $0.15 \pm 0.03$ & $7.88 \pm 1.35$ & 533 & EMR\\
+grCor0.75\_5 & $0.38 \pm 0.06$ & $7.5 \pm 1.43$ & 691 & PEP\\
+grCor0.75\_1 & $0.37 \pm 0.11$ & $7.53 \pm 1.53$ & 477 & OV\\
+grCor0.7\_11 & $0.36 \pm 0.08$ & $7.39 \pm 1.4$ & 855 & PEP\\
+grCor0.75\_11 & $0.4 \pm 0.07$ & $7.38 \pm 1.39$ & 545 & PEP\\
+\midrule
+\addlinespace
+\multicolumn{5}{@{}l@{}}{\textbf{Hackett-uniqueSpsSet}} \\
+\midrule
+grCor0.8\_24 & $0.15 \pm 0.03$ & $7.82 \pm 1.43$ & 514 & EMR\\
+grCor0.7\_17 & $0.15 \pm 0.03$ & $7.9 \pm 1.29$ & 831 & EMR\\
+grCor0.75\_19 & $0.15 \pm 0.03$ & $8.01 \pm 1.3$ & 710 & EMR\\
+grCor0.8\_5 & $0.4 \pm 0.05$ & $7.41 \pm 1.33$ & 522 & PEP\\
+grCor0.75\_29 & $0.33 \pm 0.08$ & $7.84 \pm 1.43$ & 586 & BV\\
+grCor0.7\_43 & $0.4 \pm 0.09$ & $7.77 \pm 1.49$ & 672 & PEP\\
+grCor0.75\_18 & $0.37 \pm 0.09$ & $7.47 \pm 1.38$ & 487 & PEP\\
 \bottomrule
 \end{tabular}
 \end{table}
+
+\clearpage% Flush earlier floats (otherwise order might not be correct)
+\begin{landscape}% Landscape page
+\begin{table}
+\center
+\caption[LHT loadings of the alternative axes]{
+Mean $\pm$ standard deviation of the loadings of the traits for clusters of
+similar significant PCs (Eigenvalue \textgreater{1}) not selected for the
+fast-slow axes. Each group contains PCs with scores correlation greater than the
+correlation specified in the group name (e.g. gr0.8 means correlation
+\textgreater{0.8}). The main trait of the axes appear among brackets,
+following the conventions in the table \ref{tab:table2.1}.
+}
+\label{tab:tabApp2.1.5}
+\begin{footnotesize}
+
+\textbf{Phylogeny based on Ericson backbone and max N dataset}
+
+\begin{tabular}{@{}l|rrrrrrrr@{}}
+\toprule
+  & gr0.7\_30 (RLS) & gr0.75\_1 (BV) & gr0.7\_11 (PEP) & gr0.8\_63 (PEP) & gr0.75\_7 (PEP) & gr0.8\_23 (EMR) & gr0.7\_21 (EMR) & gr0.8\_31 (EMR)\\
+\midrule
+BV & $-0.55 \pm 0.04$ & $-0.6 \pm 0.07$ & $-0.45 \pm 0.01$ & $-0.58 \pm 0.01$ & $0.22 \pm 0.13$ & $0.01 \pm 0.1$ & $-0.02 \pm 0.08$ & $-0.01 \pm 0.02$\\
+OV & $-0.29 \pm 0.02$ & $-0.41 \pm 0.09$ & $-0.46 \pm 0.03$ & $-0.56 \pm 0.01$ & $0.45 \pm 0.06$ & $0.02 \pm 0.11$ & $0.02 \pm 0.08$ & $0.02 \pm 0.01$\\
+LFS & $0.73 \pm 0.08$ & $0.69 \pm 0.12$ & $0.45 \pm 0.04$ & $0.56 \pm 0.03$ & $-0.27 \pm 0.15$ & $-0.05 \pm 0.11$ & $0.02 \pm 0.12$ & $0.01 \pm 0.03$\\
+RLS & $0.73 \pm 0.08$ & $0.66 \pm 0.12$ & $0.47 \pm 0.03$ & $0.59 \pm 0.02$ & $-0.3 \pm 0.15$ & $-0.06 \pm 0.11$ & $0.02 \pm 0.12$ & $0.01 \pm 0.03$\\
+EMR & $0.04 \pm 0.09$ & $0.01 \pm 0.05$ & $-0.04 \pm 0.07$ & $0 \pm 0.06$ & $0.05 \pm 0.08$ & $0.91 \pm 0.05$ & $0.86 \pm 0.04$ & $0.87 \pm 0.05$\\
+BM & $0.11 \pm 0.08$ & $0.06 \pm 0.09$ & $-0.02 \pm 0.09$ & $0.03 \pm 0.06$ & $0.04 \pm 0.09$ & $-0.01 \pm 0.08$ & $-0.21 \pm 0.08$ & $-0.15 \pm 0.05$\\
+PRO & $0.04 \pm 0.1$ & $0.06 \pm 0.09$ & $0.24 \pm 0.11$ & $0.14 \pm 0.06$ & $-0.5 \pm 0.11$ & $0.4 \pm 0.07$ & $0.1 \pm 0.09$ & $0.13 \pm 0.06$\\
+PEP & $0.46 \pm 0.02$ & $0.63 \pm 0.08$ & $0.52 \pm 0.03$ & $0.77 \pm 0.02$ & $-0.74 \pm 0.06$ & $0.07 \pm 0.14$ & $0.13 \pm 0.08$ & $0.13 \pm 0.02$\\
+AFB & $0.06 \pm 0.05$ & $0.01 \pm 0.14$ & $-0.09 \pm 0.07$ & $-0.03 \pm 0.04$ & $0.18 \pm 0.07$ & $0.09 \pm 0.09$ & $0.03 \pm 0.11$ & $0.06 \pm 0.04$\\
+CS & $0.09 \pm 0.12$ & $0.1 \pm 0.09$ & $0.26 \pm 0.08$ & $0.15 \pm 0.06$ & $-0.48 \pm 0.08$ & $-0.1 \pm 0.09$ & $-0.23 \pm 0.09$ & $-0.21 \pm 0.06$\\
+FEC & $0.15 \pm 0.09$ & $0.25 \pm 0.1$ & $0.43 \pm 0.08$ & $0.38 \pm 0.05$ & $-0.55 \pm 0.08$ & $0.01 \pm 0.12$ & $-0.14 \pm 0.1$ & $-0.15 \pm 0.05$\\
+DP & $0.11 \pm 0.06$ & $0.05 \pm 0.07$ & $-0.09 \pm 0.05$ & $-0.01 \pm 0.04$ & $0.12 \pm 0.08$ & $0.02 \pm 0.1$ & $-0.1 \pm 0.07$ & $-0.12 \pm 0.04$\\
+FLE & $0.12 \pm 0.06$ & $0.06 \pm 0.07$ & $-0.06 \pm 0.05$ & $0.01 \pm 0.04$ & $0.1 \pm 0.07$ & $-0.03 \pm 0.11$ & $-0.19 \pm 0.07$ & $-0.21 \pm 0.04$\\
+I & $0.06 \pm 0.05$ & $0.01 \pm 0.07$ & $-0.12 \pm 0.04$ & $-0.04 \pm 0.03$ & $0.17 \pm 0.09$ & $0.12 \pm 0.09$ & $0.02 \pm 0.04$ & $0.04 \pm 0.03$\\
+\bottomrule
+\end{tabular}
+
+\textbf{Phylogeny based on Ericson backbone and restricted dataset}
+
+\begin{tabular}{@{}l|rrrrrrrr@{}}
+\toprule
+  & gr0.7\_19 (EMR) & gr0.7\_17 (EMR) & gr0.8\_22 (EMR) & gr0.8\_5 (PEP) & gr0.7\_1 (BV) & gr0.75\_1 (BV) & gr0.7\_13 (PEP) & gr0.8\_60 (PEP)\\
+\midrule
+BV & $0 \pm 0.01$ & $0 \pm 0.05$ & $0 \pm 0.13$ & $-0.28 \pm 0.15$ & $-0.49 \pm 0.01$ & $-0.47 \pm 0.1$ & $-0.42 \pm 0.12$ & $-0.58 \pm 0.02$\\
+OV & $0.02 \pm 0.01$ & $0.02 \pm 0.03$ & $0.02 \pm 0.1$ & $-0.36 \pm 0.14$ & $-0.55 \pm 0.01$ & $-0.54 \pm 0.11$ & $-0.41 \pm 0.07$ & $-0.58 \pm 0.01$\\
+LFS & $-0.04 \pm 0.03$ & $-0.03 \pm 0.09$ & $-0.03 \pm 0.14$ & $0.21 \pm 0.14$ & $0.69 \pm 0.03$ & $0.71 \pm 0.13$ & $0.45 \pm 0.16$ & $0.56 \pm 0.04$\\
+RLS & $-0.05 \pm 0.17$ & $-0.03 \pm 0.09$ & $-0.03 \pm 0.14$ & $0.24 \pm 0.14$ & $0.65 \pm 0.03$ & $0.66 \pm 0.14$ & $0.48 \pm 0.16$ & $0.58 \pm 0.03$\\
+EMR & $0.89 \pm 0.08$ & $0.89 \pm 0.07$ & $0.9 \pm 0.04$ & $-0.06 \pm 0.09$ & $-0.01 \pm 0.08$ & $-0.01 \pm 0.03$ & $-0.05 \pm 0.06$ & $-0.01 \pm 0.04$\\
+BM & $0 \pm 0.07$ & $-0.13 \pm 0.08$ & $-0.13 \pm 0.06$ & $-0.07 \pm 0.06$ & $0.07 \pm 0.06$ & $0.08 \pm 0.06$ & $-0.03 \pm 0.12$ & $0.03 \pm 0.05$\\
+PRO & $0.38 \pm 0.07$ & $0.26 \pm 0.12$ & $0.3 \pm 0.08$ & $0.57 \pm 0.08$ & $0.08 \pm 0.05$ & $0.08 \pm 0.08$ & $0.3 \pm 0.09$ & $0.15 \pm 0.07$\\
+PEP & $0.09 \pm 0.02$ & $0.1 \pm 0.02$ & $0.1 \pm 0.12$ & $0.74 \pm 0.19$ & $0.45 \pm 0.02$ & $0.53 \pm 0.12$ & $0.57 \pm 0.07$ & $0.77 \pm 0.02$\\
+AFB & $0.12 \pm 0.04$ & $0.01 \pm 0.06$ & $0.02 \pm 0.09$ & $-0.22 \pm 0.09$ & $0.01 \pm 0.03$ & $0.01 \pm 0.08$ & $-0.1 \pm 0.08$ & $-0.03 \pm 0.04$\\
+CS & $-0.03 \pm 0.09$ & $-0.16 \pm 0.11$ & $-0.18 \pm 0.09$ & $0.37 \pm 0.11$ & $0.16 \pm 0.09$ & $0.17 \pm 0.09$ & $0.3 \pm 0.08$ & $0.16 \pm 0.06$\\
+FEC & $0.02 \pm 0.09$ & $-0.09 \pm 0.09$ & $-0.07 \pm 0.12$ & $0.59 \pm 0.13$ & $0.25 \pm 0.06$ & $0.26 \pm 0.12$ & $0.39 \pm 0.08$ & $0.37 \pm 0.05$\\
+DP & $0.04 \pm 0.05$ & $-0.04 \pm 0.07$ & $-0.04 \pm 0.07$ & $-0.19 \pm 0.09$ & $0.05 \pm 0.04$ & $0.05 \pm 0.05$ & $-0.1 \pm 0.1$ & $-0.01 \pm 0.05$\\
+FLE & $-0.01 \pm 0.05$ & $-0.11 \pm 0.06$ & $-0.08 \pm 0.09$ & $-0.15 \pm 0.11$ & $0.06 \pm 0.04$ & $0.06 \pm 0.05$ & $-0.07 \pm 0.1$ & $0 \pm 0.04$\\
+I & $0.13 \pm 0.04$ & $0.03 \pm 0.06$ & $0.04 \pm 0.08$ & $-0.22 \pm 0.07$ & $0.01 \pm 0.03$ & $0 \pm 0.06$ & $-0.13 \pm 0.09$ & $-0.05 \pm 0.04$\\
+\bottomrule
+\end{tabular}
+\end{footnotesize}
+\end{table}
+
+% Pretend that the next table is the continuation of the former
+% \addtocounter{table}{-1}
+
+\clearpage% Flush earlier floats (otherwise order might not be correct)
+
+\begin{table}
+\center
+\begin{footnotesize}
+
+\textbf{Phylogeny based on Hackett backbone and max N dataset}
+
+\begin{tabular}{@{}l|rrrrrr@{}}
+\toprule
+  & gr0.8\_25 (EMR) & gr0.85\_31 (EMR) & gr0.75\_5 (PEP) & gr0.75\_1 (OV) & gr0.7\_11 (PEP) & gr0.75\_11 (PEP)\\
+\midrule
+BV & $0.01 \pm 0.04$ & $0.01 \pm 0.02$ & $-0.29 \pm 0.04$ & $-0.57 \pm 0.13$ & $-0.37 \pm 0.11$ & $-0.44 \pm 0.11$\\
+OV & $0.03 \pm 0.02$ & $0.02 \pm 0.01$ & $-0.25 \pm 0.02$ & $-0.6 \pm 0.08$ & $-0.5 \pm 0.1$ & $-0.59 \pm 0.1$\\
+LFS & $-0.04 \pm 0.08$ & $-0.06 \pm 0.03$ & $0.21 \pm 0.07$ & $0.56 \pm 0.17$ & $0.45 \pm 0.12$ & $0.39 \pm 0.11$\\
+RLS & $-0.04 \pm 0.08$ & $-0.07 \pm 0.03$ & $0.23 \pm 0.07$ & $0.57 \pm 0.17$ & $0.48 \pm 0.13$ & $0.43 \pm 0.11$\\
+EMR & $0.9 \pm 0.1$ & $0.9 \pm 0.08$ & $-0.06 \pm 0.07$ & $-0.02 \pm 0.07$ & $-0.06 \pm 0.03$ & $-0.03 \pm 0.05$\\
+BM & $-0.12 \pm 0.1$ & $0 \pm 0.06$ & $-0.14 \pm 0.06$ & $0.06 \pm 0.13$ & $-0.02 \pm 0.06$ & $-0.03 \pm 0.04$\\
+PRO & $0.26 \pm 0.1$ & $0.42 \pm 0.05$ & $0.59 \pm 0.07$ & $0.11 \pm 0.1$ & $0.23 \pm 0.07$ & $0.29 \pm 0.08$\\
+PEP & $0.12 \pm 0.02$ & $0.06 \pm 0.02$ & $0.71 \pm 0.02$ & $0.4 \pm 0.07$ & $0.52 \pm 0.11$ & $0.73 \pm 0.12$\\
+AFB & $0.04 \pm 0.06$ & $0.1 \pm 0.04$ & $-0.23 \pm 0.05$ & $0 \pm 0.08$ & $-0.09 \pm 0.1$ & $-0.1 \pm 0.08$\\
+CS & $-0.18 \pm 0.09$ & $-0.05 \pm 0.09$ & $0.35 \pm 0.09$ & $0.14 \pm 0.09$ & $0.28 \pm 0.07$ & $0.24 \pm 0.07$\\
+FEC & $-0.08 \pm 0.08$ & $0.03 \pm 0.06$ & $0.48 \pm 0.06$ & $0.37 \pm 0.08$ & $0.46 \pm 0.11$ & $0.53 \pm 0.12$\\
+DP & $-0.04 \pm 0.07$ & $0.03 \pm 0.04$ & $-0.23 \pm 0.07$ & $0.03 \pm 0.1$ & $-0.09 \pm 0.06$ & $-0.08 \pm 0.09$\\
+FLE & $-0.13 \pm 0.07$ & $-0.02 \pm 0.04$ & $-0.19 \pm 0.06$ & $0.05 \pm 0.1$ & $-0.07 \pm 0.07$ & $-0.07 \pm 0.09$\\
+I & $0.04 \pm 0.05$ & $0.14 \pm 0.03$ & $-0.27 \pm 0.06$ & $-0.02 \pm 0.09$ & $-0.12 \pm 0.07$ & $-0.11 \pm 0.08$\\
+\bottomrule
+\end{tabular}
+
+\textbf{Phylogeny based on Hacket backbone and restricted dataset}
+
+\begin{tabular}{@{}l|rrrrrrr@{}}
+\toprule
+  & gr0.8\_24 (EMR) & gr0.7\_17 (EMR) & gr0.75\_19 (EMR) & gr0.8\_5 (PEP) & gr0.75\_18 (PEP) & gr0.7\_43 (PEP) & gr0.75\_29 (BV)\\
+\midrule
+BV & $0.01 \pm 0.12$ & $0.01 \pm 0.01$ & $0 \pm 0.04$ & $-0.25 \pm 0.08$ & $-0.57 \pm 0.01$ & $-0.55 \pm 0.12$ & $-0.32 \pm 0.14$\\
+OV & $0.03 \pm 0.1$ & $0.02 \pm 0.01$ & $0.02 \pm 0.01$ & $-0.33 \pm 0.09$ & $-0.45 \pm 0.02$ & $-0.48 \pm 0.1$ & $-0.39 \pm 0.08$\\
+LFS & $-0.06 \pm 0.12$ & $-0.03 \pm 0.04$ & $-0.02 \pm 0.06$ & $0.16 \pm 0.1$ & $0.43 \pm 0.04$ & $0.65 \pm 0.12$ & $0.64 \pm 0.16$\\
+RLS & $-0.07 \pm 0.13$ & $-0.03 \pm 0.04$ & $-0.02 \pm 0.07$ & $0.19 \pm 0.1$ & $0.48 \pm 0.04$ & $0.62 \pm 0.11$ & $0.61 \pm 0.16$\\
+EMR & $0.9 \pm 0.03$ & $0.89 \pm 0.05$ & $0.9 \pm 0.05$ & $-0.06 \pm 0.03$ & $-0.03 \pm 0.06$ & $0 \pm 0.06$ & $0.02 \pm 0.06$\\
+BM & $0 \pm 0.07$ & $-0.12 \pm 0.05$ & $-0.14 \pm 0.07$ & $-0.1 \pm 0.07$ & $-0.01 \pm 0.08$ & $0.03 \pm 0.06$ & $0.12 \pm 0.13$\\
+PRO & $0.41 \pm 0.09$ & $0.28 \pm 0.06$ & $0.27 \pm 0.1$ & $0.68 \pm 0.1$ & $0.29 \pm 0.08$ & $0.12 \pm 0.08$ & $0.06 \pm 0.08$\\
+PEP & $0.07 \pm 0.11$ & $0.11 \pm 0.02$ & $0.12 \pm 0.02$ & $0.78 \pm 0.09$ & $0.6 \pm 0.04$ & $0.82 \pm 0.13$ & $0.59 \pm 0.07$\\
+AFB & $0.11 \pm 0.1$ & $0.04 \pm 0.04$ & $0.05 \pm 0.04$ & $-0.22 \pm 0.09$ & $-0.07 \pm 0.05$ & $-0.01 \pm 0.07$ & $0.05 \pm 0.08$\\
+CS & $-0.03 \pm 0.11$ & $-0.21 \pm 0.08$ & $-0.22 \pm 0.08$ & $0.42 \pm 0.11$ & $0.17 \pm 0.08$ & $0.15 \pm 0.08$ & $0.14 \pm 0.07$\\
+FEC & $0.03 \pm 0.11$ & $-0.06 \pm 0.06$ & $-0.06 \pm 0.07$ & $0.52 \pm 0.12$ & $0.4 \pm 0.09$ & $0.32 \pm 0.13$ & $0.21 \pm 0.06$\\
+DP & $0.04 \pm 0.07$ & $-0.05 \pm 0.05$ & $-0.05 \pm 0.05$ & $-0.18 \pm 0.06$ & $-0.07 \pm 0.07$ & $0 \pm 0.08$ & $0.13 \pm 0.1$\\
+FLE & $-0.02 \pm 0.08$ & $-0.13 \pm 0.05$ & $-0.12 \pm 0.05$ & $-0.16 \pm 0.06$ & $-0.05 \pm 0.06$ & $0.02 \pm 0.09$ & $0.14 \pm 0.1$\\
+I & $0.14 \pm 0.07$ & $0.04 \pm 0.05$ & $0.04 \pm 0.04$ & $-0.22 \pm 0.05$ & $-0.1 \pm 0.06$ & $-0.03 \pm 0.07$ & $0.06 \pm 0.1$\\
+\bottomrule
+\end{tabular}
+
+\end{footnotesize}
+\end{table}
+\end{landscape}% Landscape page
+
+
+\clearpage% Flush earlier floats (otherwise order might not be correct)
+\begin{landscape}% Landscape page
+\begin{table}
+\center
+\caption[LHT relative importance of the alternative axes]{
+Relative weights of the life history traits for each axes described in the
+table \ref{tab:tabApp2.1.4}. Values range from -1 to 1, where negative values
+means that the absolute value of the trait loadings are lower than expected by
+the frequency of the trait and positive values for traits with higher loadings
+than expected by the frequency of the trait in the selected PPCAs (see main
+text for details).
+}
+\label{tab:tabApp2.1.6}
+\begin{footnotesize}
+
+\textbf{Phylogeny based on Ericson backbone and max N dataset}
+
+\begin{tabular}{@{}l|rrrrrrrr@{}}
+\toprule
+  & gr0.8\_23 (EMR) & gr0.7\_21 (EMR) & gr0.8\_31 (EMR) & gr0.75\_7 (PEP) & gr0.7\_11 (PEP) & gr0.8\_63 (PEP) & gr0.7\_30 (RLS) & gr0.75\_1 (BV)\\
+\midrule
+BV & -0.05 & -0.05 & -0.05 & 0.01 & 0.05 & 0.07 & 0.08 & 0.08\\
+OV & -0.05 & -0.04 & -0.04 & 0.04 & 0.06 & 0.07 & 0.04 & 0.06\\
+LFS & -0.05 & -0.06 & -0.06 & -0.01 & 0.04 & 0.06 & 0.10 & 0.09\\
+RLS & -0.05 & -0.06 & -0.06 & 0.00 & 0.04 & 0.06 & 0.10 & 0.09\\
+EMR & 0.35 & 0.29 & 0.29 & -0.06 & -0.05 & -0.06 & -0.06 & -0.07\\
+BM & 0.00 & 0.02 & 0.00 & -0.01 & -0.05 & -0.05 & -0.02 & -0.03\\
+PRO & 0.09 & 0.01 & 0.01 & 0.02 & 0.00 & -0.02 & -0.04 & -0.02\\
+PEP & -0.02 & -0.02 & -0.03 & 0.06 & 0.07 & 0.09 & 0.06 & 0.08\\
+AFB & -0.03 & -0.06 & -0.04 & -0.03 & -0.04 & -0.05 & -0.05 & -0.06\\
+CS & -0.02 & 0.04 & 0.04 & 0.01 & 0.00 & -0.01 & -0.06 & -0.03\\
+FEC & -0.09 & 0.00 & 0.00 & 0.04 & 0.02 & 0.00 & -0.04 & -0.02\\
+DP & -0.05 & -0.02 & -0.03 & -0.02 & -0.04 & -0.06 & -0.03 & -0.05\\
+FLE & -0.04 & 0.01 & 0.01 & -0.03 & -0.05 & -0.06 & -0.03 & -0.05\\
+I & -0.01 & -0.05 & -0.04 & -0.02 & -0.04 & -0.05 & -0.05 & -0.07\\
+\bottomrule
+\end{tabular}
+
+\textbf{Phylogeny based on Ericson backbone and restricted dataset}
+
+\begin{tabular}{@{}l|rrrrrrrr@{}}
+\toprule
+  & gr0.7\_19 (EMR) & gr0.7\_17 (EMR) & gr0.8\_22 (EMR) & gr0.8\_5 (PEP) & gr0.7\_1 (BV) & gr0.75\_1 (BV) & gr0.7\_13 (PEP) & gr0.8\_60 (PEP)\\
+\midrule
+BV & -0.06 & -0.05 & -0.05 & 0.01 & 0.07 & 0.07 & 0.05 & 0.07\\
+OV & -0.05 & -0.04 & -0.04 & 0.03 & 0.08 & 0.08 & 0.05 & 0.07\\
+LFS & -0.05 & -0.06 & -0.06 & -0.02 & 0.09 & 0.09 & 0.03 & 0.06\\
+RLS & -0.04 & -0.06 & -0.06 & -0.01 & 0.09 & 0.09 & 0.04 & 0.06\\
+EMR & 0.36 & 0.33 & 0.33 & -0.05 & -0.06 & -0.06 & -0.05 & -0.06\\
+BM & 0.00 & 0.02 & 0.01 & -0.01 & -0.03 & -0.03 & -0.04 & -0.05\\
+PRO & 0.09 & 0.05 & 0.06 & 0.03 & -0.03 & -0.03 & 0.00 & -0.02\\
+PEP & -0.01 & -0.02 & -0.02 & 0.06 & 0.06 & 0.07 & 0.07 & 0.09\\
+AFB & -0.01 & -0.07 & -0.07 & -0.03 & -0.06 & -0.06 & -0.04 & -0.05\\
+CS & -0.03 & 0.01 & 0.01 & 0.01 & -0.02 & -0.02 & 0.00 & -0.01\\
+FEC & -0.10 & -0.03 & -0.03 & 0.04 & -0.02 & -0.02 & 0.02 & 0.00\\
+DP & -0.04 & -0.03 & -0.04 & -0.02 & -0.05 & -0.05 & -0.04 & -0.06\\
+FLE & -0.05 & 0.00 & -0.01 & -0.02 & -0.05 & -0.05 & -0.05 & -0.06\\
+I & 0.00 & -0.05 & -0.04 & -0.01 & -0.07 & -0.07 & -0.03 & -0.05\\
+\bottomrule
+\end{tabular}
+\end{footnotesize}
+\end{table}
+
+% Pretend that the next table is the continuation of the former
+% \addtocounter{table}{-1}
+
+\clearpage% Flush earlier floats (otherwise order might not be correct)
+
+\begin{table}
+\center
+\begin{footnotesize}
+
+\textbf{Phylogeny based on Hackett backbone and max N dataset}
+
+\begin{tabular}{@{}l|rrrrrr@{}}
+\toprule
+  & gr0.8\_25 (EMR) & gr0.85\_31 (EMR) & gr0.75\_5 (PEP) & gr0.75\_1 (OV) & gr0.7\_11 (PEP) & gr0.75\_11 (PEP)\\
+\midrule
+BV & -0.05 & -0.05 & 0.00 & 0.08 & 0.04 & 0.04\\
+OV & -0.04 & -0.05 & 0.02 & 0.09 & 0.06 & 0.06\\
+LFS & -0.05 & -0.05 & -0.02 & 0.07 & 0.03 & 0.02\\
+RLS & -0.05 & -0.04 & -0.02 & 0.08 & 0.04 & 0.02\\
+EMR & 0.32 & 0.35 & -0.05 & -0.06 & -0.05 & -0.05\\
+BM & 0.01 & 0.00 & -0.01 & -0.03 & -0.05 & -0.03\\
+PRO & 0.04 & 0.09 & 0.04 & -0.02 & 0.00 & 0.00\\
+PEP & -0.03 & -0.02 & 0.06 & 0.06 & 0.06 & 0.08\\
+AFB & -0.06 & -0.02 & -0.02 & -0.07 & -0.04 & -0.04\\
+CS & 0.01 & -0.02 & 0.01 & -0.01 & 0.00 & 0.00\\
+FEC & -0.03 & -0.09 & 0.03 & 0.00 & 0.02 & 0.02\\
+DP & -0.03 & -0.04 & -0.01 & -0.06 & -0.04 & -0.03\\
+FLE & 0.00 & -0.04 & -0.02 & -0.06 & -0.05 & -0.04\\
+I & -0.04 & -0.01 & -0.01 & -0.06 & -0.04 & -0.03\\
+\bottomrule
+\end{tabular}
+
+\textbf{Phylogeny based on Hackett backbone and restricted dataset}
+
+\begin{tabular}{@{}l|rrrrrrr@{}}
+\toprule
+  & gr0.8\_24 (EMR) & gr0.7\_17 (EMR) & gr0.75\_19 (EMR) & gr0.8\_5 (PEP) & gr0.75\_29 (BV) & gr0.7\_43 (PEP) & gr0.75\_18 (PEP)\\
+\midrule
+BV & -0.05 & -0.05 & -0.05 & 0.00 & 0.05 & 0.07 & 0.07\\
+OV & -0.05 & -0.04 & -0.05 & 0.02 & 0.06 & 0.06 & 0.06\\
+LFS & -0.05 & -0.06 & -0.07 & -0.03 & 0.09 & 0.07 & 0.04\\
+RLS & -0.04 & -0.06 & -0.07 & -0.02 & 0.09 & 0.07 & 0.05\\
+EMR & 0.34 & 0.32 & 0.32 & -0.05 & -0.05 & -0.06 & -0.06\\
+BM & 0.00 & 0.01 & 0.01 & -0.01 & -0.03 & -0.04 & -0.04\\
+PRO & 0.09 & 0.05 & 0.05 & 0.04 & -0.03 & -0.02 & -0.01\\
+PEP & -0.02 & -0.02 & -0.01 & 0.06 & 0.08 & 0.10 & 0.08\\
+AFB & -0.01 & -0.06 & -0.05 & -0.02 & -0.06 & -0.05 & -0.04\\
+CS & -0.02 & 0.02 & 0.02 & 0.01 & -0.04 & -0.02 & -0.01\\
+FEC & -0.10 & -0.03 & -0.03 & 0.04 & -0.02 & -0.01 & 0.02\\
+DP & -0.04 & -0.03 & -0.04 & -0.01 & -0.05 & -0.06 & -0.05\\
+FLE & -0.04 & 0.00 & 0.00 & -0.02 & -0.04 & -0.06 & -0.05\\
+I & -0.01 & -0.04 & -0.04 & -0.01 & -0.06 & -0.05 & -0.04\\
+\bottomrule
+\end{tabular}
+
+\end{footnotesize}
+\end{table}
+\end{landscape}% Landscape page
+
+
+
+\clearpage% Flush earlier floats (otherwise order might not be correct)
+%\thispagestyle{empty}% empty page style (?)
+\begin{footnotesize}
+\begin{longtable}{@{}lrrrr@{}}
+\caption[Phylogenetic signal]{
+Phylogenetic signal of the life history traits and the averaged life history
+axes from the PPCAs. All $\lambda$ and K significant with p-value
+\textless{0.001}.}
+\label{tab:tabApp2.1.7}\\
+\toprule
+  & K Ericson & K Hackett & $\lambda$ Ericson & $\lambda$ Hackett\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+  & K Ericson & K Hackett & $\lambda$ Ericson & $\lambda$ Hackett\tabularnewline
+\midrule
+\endhead
+AFB & 0.34 & 0.33 & 0.92 & 0.91\tabularnewline
+BM & 2.62 & 2.67 & 0.99 & 0.99\tabularnewline
+BV & 0.09 & 0.09 & 0.62 & 0.62\tabularnewline
+CS & 0.63 & 0.71 & 0.97 & 0.97\tabularnewline
+DP & 1.10 & 1.16 & 0.95 & 0.95\tabularnewline
+EMR & 1.04 & 1.11 & 0.93 & 0.93\tabularnewline
+FEC & 0.51 & 0.56 & 0.94 & 0.94\tabularnewline
+FLE & 0.60 & 0.62 & 0.93 & 0.93\tabularnewline
+I & 2.42 & 2.59 & 0.98 & 0.98\tabularnewline
+LFS & 0.11 & 0.11 & 0.71 & 0.70\tabularnewline
+OV & 0.14 & 0.15 & 0.71 & 0.71\tabularnewline
+PEP & 0.12 & 0.13 & 0.73 & 0.73\tabularnewline
+PRO & 0.48 & 0.50 & 0.95 & 0.95\tabularnewline
+RLS & 0.11 & 0.12 & 0.71 & 0.71\tabularnewline
+FSe bestAIC-Ericson-maxN & 0.70 &  & 0.96 & \tabularnewline
+FSe bestAIC-Ericson-restricSet & 0.88 &  & 0.96 & \tabularnewline
+FSe bestAIC-Hackett-maxN &  & 0.67 &  & 0.95\tabularnewline
+FSe bestAIC-Hackett-restricSet &  & 0.97 &  & 0.96\tabularnewline
+FSe-Ericson-maxN & 0.62 &  & 0.95 & \tabularnewline
+FSe-Ericson-restricSet & 1.34 &  & 0.97 & \tabularnewline
+FSe-Hackett-maxN &  & 0.63 &  & 0.94\tabularnewline
+FSe-Hackett-restricSet &  & 1.34 &  & 0.97\tabularnewline
+FSgt bestAIC-Ericson-maxN & 0.97 &  & 0.97 & \tabularnewline
+FSgt bestAIC-Ericson-restricSet & 1.59 &  & 0.98 & \tabularnewline
+FSgt bestAIC-Hackett-maxN &  & 1.05 &  & 0.97\tabularnewline
+FSgt bestAIC-Hackett-restricSet &  & 1.78 &  & 0.98\tabularnewline
+FSgt-Ericson-maxN & 0.81 &  & 0.96 & \tabularnewline
+FSgt-Ericson-restricSet & 1.79 &  & 0.98 & \tabularnewline
+FSgt-Hackett-maxN &  & 0.86 &  & 0.96\tabularnewline
+FSgt-Hackett-restricSet &  & 1.89 &  & 0.98\tabularnewline
+grCor0.7\_1-Ericson-restricSet & 0.10 &  & 0.58 & \tabularnewline
+grCor0.7\_11-Ericson-maxN & 0.15 &  & 0.75 & \tabularnewline
+grCor0.7\_11-Hackett-maxN &  & 0.17 &  & 0.76\tabularnewline
+grCor0.7\_13-Ericson-restricSet & 0.16 &  & 0.74 & \tabularnewline
+grCor0.7\_17-Ericson-restricSet & 0.61 &  & 0.92 & \tabularnewline
+grCor0.7\_17-Hackett-restricSet &  & 0.71 &  & 0.92\tabularnewline
+grCor0.7\_19-Ericson-restricSet & 0.95 &  & 0.92 & \tabularnewline
+grCor0.7\_21-Ericson-maxN & 0.44 &  & 0.92 & \tabularnewline
+grCor0.7\_30-Ericson-maxN & 0.12 &  & 0.62 & \tabularnewline
+grCor0.7\_43-Hackett-restricSet &  & 0.10 &  & 0.53\tabularnewline
+grCor0.75\_1-Ericson-maxN & 0.10 &  & 0.56 & \tabularnewline
+grCor0.75\_1-Ericson-restricSet & 0.10 &  & 0.58 & \tabularnewline
+grCor0.75\_1-Hackett-maxN &  & 0.12 &  & 0.61\tabularnewline
+grCor0.75\_11-Hackett-maxN &  & 0.17 &  & 0.77\tabularnewline
+grCor0.75\_18-Hackett-restricSet &  & 0.14 &  & 0.66\tabularnewline
+grCor0.75\_19-Hackett-restricSet &  & 0.71 &  & 0.92\tabularnewline
+grCor0.75\_29-Hackett-restricSet &  & 0.14 &  & 0.64\tabularnewline
+grCor0.75\_5-Hackett-maxN &  & 0.35 &  & 0.88\tabularnewline
+grCor0.75\_7-Ericson-maxN & 0.29 &  & 0.88 & \tabularnewline
+grCor0.8\_22-Ericson-restricSet & 0.64 &  & 0.92 & \tabularnewline
+grCor0.8\_23-Ericson-maxN & 0.70 &  & 0.92 & \tabularnewline
+grCor0.8\_24-Hackett-restricSet &  & 1.06 &  & 0.92\tabularnewline
+grCor0.8\_25-Hackett-maxN &  & 0.61 &  & 0.92\tabularnewline
+grCor0.8\_31-Ericson-maxN & 0.49 &  & 0.92 & \tabularnewline
+grCor0.8\_5-Ericson-restricSet & 0.38 &  & 0.89 & \tabularnewline
+grCor0.8\_5-Hackett-restricSet &  & 0.48 &  & 0.91\tabularnewline
+grCor0.8\_60-Ericson-restricSet & 0.10 &  & 0.57 & \tabularnewline
+grCor0.8\_63-Ericson-maxN & 0.10 &  & 0.60 & \tabularnewline
+grCor0.85\_31-Hackett-maxN &  & 0.86 &  & 0.92\tabularnewline
+\bottomrule
+\end{longtable}
+\end{footnotesize}
+\clearpage% Flush page
 
 
 \afterpage{
 \clearpage% Flush earlier floats (otherwise order might not be correct)
-%\thispagestyle{empty}% empty page style (?)
+%\thispagestyle{empty}% empty page style
 \begin{landscape}% Landscape page
 \begin{footnotesize}
 \begin{longtable}{@{}l|rrrr@{}}
 \caption[LH axes correlation]{
-Phylogenetic corrected correlation among life history traits and the averaged life history axes from 
-PPCAs. All axes in columns are for the restricted data set and Hackett phylogeny.}
-\label{tab:tabApp2.1.3}\\
+Phylogenetic corrected correlation among life history traits and the averaged
+life history axes from PPCAs. All axes in the columns are for the restricted
+data set and Hackett phylogeny.}
+\label{tab:tabApp2.1.8}\\
 \toprule
   & FSe & FSgt & FSe bestAIC & FSgt bestAIC \tabularnewline
 \midrule
@@ -202,6 +740,9 @@ grCor0.7\_30\_Ericson-maxN         & 0.54 & 0.05 & 0.55 & -0.09 \tabularnewline
 \end{landscape}
 \clearpage% Flush page
 }
+
+% Pretend that the next table is the continuation of the former
+% \addtocounter{table}{-1}
 
 \afterpage{
 \clearpage% Flush earlier floats (otherwise order might not be correct)
@@ -281,14 +822,73 @@ grCor0.7\_30\_Ericson-maxN        & 0.99 & -0.03 & 0.01 & 0.01 & 0.97 & 0.90 & 0
 \end{longtable}
 \end{footnotesize}
 \end{landscape}
-\clearpage% Flush page
 }
 
+\clearpage% Flush earlier floats (otherwise order might not be correct)
 
 
+\section*{Supplementary figures}
 
-Leslie ~ PPC
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=.8\textwidth]{./Figures/Appendix2_1/FS loadings plots-ALL.png}
+\caption[LHT loadings of the FS axes]{
+Mean $\pm$ standard deviation AIC weighted loadings of the traits for the
+fast-slow axes based on models predicting generation time or elasticity of
+adult survival for all trait combination PCs o using only the PCs with AIC
+\textless{2} (best AIC). From darker to lighter color: FSe, FSe best AIC, FSgt
+and FSgt best AIC.}
+\label{fig:figApp2.1.1}
+\end{figure}
 
-Table S2. Leslie ~ LHT
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=.8\textwidth]{./Figures/Appendix2_1/FS relWeights plots-ALL.png}
+\caption[LHT relative importance of the FS axes]{
+Relative weight of the life history traits in the fast-slow continuum. Values
+range from -1 to 1, where negative values means that the absolute value of the
+trait loadings are lower than expected by the frequency of the trait and
+positive values for traits with higher loadings than expected by the frequency
+of the trait in the selected PPCAs (see main text for details). The loadings and
+frequencies come from selected PCs that better predict elasticities of the
+adult survival (FSe) or generation time (FSgt), weighted by the AIC based weight
+of the models taking all or only the models with $\Delta AIC < 2$ (best AIC).
+From darker to lighter color: FSe, FSe best AIC, FSgt and FSgt best AIC.}
+\label{fig:figApp2.1.2}
+\end{figure}
 
-Figure S1 Hypervolumes
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=.8\textwidth]{./Figures/Appendix2_1/2nd loadings plots-ALL.png}
+\caption[LHT loadings of the secondary axes]{
+Mean $\pm$ standard deviation of the loadings of the traits for clusters of
+similar significant PCs (Eigenvalue \textgreater{1}) not selected for the
+fast-slow axes. Groups follow the same order and colors than figure
+\ref{fig:figApp2.1.5}.}
+\label{fig:figApp2.1.3}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=.8\textwidth]{./Figures/Appendix2_1/2nd relWeights plots-ALL.png}
+\caption[LHT relative importance of the secondary axes]{
+Relative weights of the life history traits for each axes described in the
+table \ref{tab:tabApp2.1.4}. Values range from -1 to 1, where negative values
+means that the absolute value of the trait loadings are lower than expected by
+the frequency of the trait and positive values for traits with higher loadings
+than expected by the frequency of the trait in the selected PPCAs (see main
+text for details). Groups follow the same order and colors than figure
+\ref{fig:figApp2.1.5}.}
+\label{fig:figApp2.1.4}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=.8\textwidth]{./Figures/Appendix2_1/2nd axes trees-1.png}
+\caption[Cluster dendogram of the secondary axes]{
+Dendogram of the distance among clusters of similar significant PCs (Eigenvalue
+\textgreater{1}) not selected for the fast-slow axes. Each group contains PCs
+with scores correlation greater than the correlation specified in the group name
+(e.g. gr0.8 means correlation \textgreater{0.8}).}
+\label{fig:figApp2.1.5}
+\end{figure}

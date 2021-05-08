@@ -20,16 +20,17 @@ information for birds to demonstrate that not all combinations of life history
 traits are possible. Rather, much of life history variation is structured along
 the fast-slow continuum, defined on the basis of elasticity analyses and
 estimations of generation time derived from demographic models. The fast-slow
-continuum may be best described by $\sim70$ (elasticity) or $\sim500$ (generation
-time) out of 7527 possible trait combinations, is only weakly correlated with
-body mass and exhibits substantial phylogenetic signal. After extracting the
-fast-slow continuum, the remaining life history variation is structured along
-other less studied axes defined by the frequency of reproductive bouts, the
-extent of developmental period and the quality-quantity trade-off in egg
-production. Describing the fast-slow continuum based on demographic analyses
-avoids the vagueness of the concept and allows integrating it with other axes of
-variation, providing a more solid basis to continue investigating the causes and
-consequences of life history variation through broad comparative analyses.
+continuum may be best described by $\sim70$ (elasticity) or $\sim500$
+(generation time) out of 7527 possible trait combinations, is only weakly
+correlated with body mass and exhibits substantial phylogenetic signal. After
+extracting the fast-slow continuum, the remaining life history variation is
+structured along other less studied axes defined by the frequency of
+reproductive bouts, the extent of developmental period and the quality-quantity
+trade-off in egg production. Describing the fast-slow continuum based on
+demographic analyses avoids the vagueness of the concept and allows integrating
+it with other axes of variation, providing a more solid basis to continue
+investigating the causes and consequences of life history variation through
+broad comparative analyses.
 
 
 \section{Introduction}
@@ -263,7 +264,7 @@ the best models as those with 2 units difference from the model with the lowest
 AIC ($\Delta AIC < 2$).
 
 
-\subsection*{Defining species position on the FS}
+\subsection*{Defining species position on the fast-slow axes}
 
 Our previous analyses are based on the combination of detailed demographic data 
 and full life history information for 30 species. If there are combinations of 
@@ -287,8 +288,9 @@ other traits were missing. As before, we defined their position as the mean
 scores of best PCs weighted by the AIC based weights of the elasticity 
 and generation time models (FSe and FSgt).
 
-Our extrapolations to estimate the FS assumes that the studied subsets of 
-species are representative of the observed variation in the fast-slow continuum. 
+Our extrapolations to estimate the fast-slow axes assumes that the studied
+subsets of species are representative of the observed variation in the fast-slow
+continuum.
 This assumption is supported by two analyses. First, the phylogenetically 
 corrected correlation \citep{Revell2009a}⁠ of the relevant PCs estimated with
 the demographic, restricted and full life history datasets was
@@ -303,11 +305,11 @@ history dataset.
 
 We analysed the remaining ~9500 (from 9385 to 9604 depending on the life 
 history dataset and phylogeny) significant PCs (eigenvalue \textgreater{1}) not 
-selected as components of the FS to explore potentially different axes of 
-variation. First, we used the correlation among the scores of the PCs to build 
-clusters using different minimum absolute correlations (0.7 – 0.9), discarding 
-clusters containing less than 5\% of the PCs and removing duplicated clusters in 
-different correlation thresholds. 
+selected as components of the fast-slow axes to explore potentially different
+axes of variation. First, we used the correlation among the scores of the PCs to
+build clusters using different minimum absolute correlations (0.7 – 0.9),
+discarding clusters containing less than 5\% of the PCs and removing duplicated
+clusters in different correlation thresholds.
 For each group, we flip the PCs to align the scores and loadings when needed. 
 Every cluster represents a potential axis of life history variation. We grouped 
 clusters with a correlation on averaged loadings \textgreater{0.95} for 
@@ -327,83 +329,107 @@ expected by the frequency of the trait and positive values for traits with
 higher loadings than expected by the frequency of the trait. In addition, we 
 calculated the part of the variance explained by each PC from the total variance 
 of the traits included in the PPCA.
-For the FS axes we weighted the former metrics by the AIC based weight from all 
-the models and also including only the best models.
+For the fast-slow axes we weighted the former metrics by the AIC based weight
+from all the models and also including only the best models.
 
 For each defined axis, we averaged the scores of the species to generate a data 
-base of life history for birds. Again, for the FS axes we weighted the PCs 
-scores by the AIC based weight for all models and also using the PCs in the 
-best models only. The averaged FS scores where then used to predict adult 
-elasticities and generation time to compare the performance against the scores 
-of single PCs.
+base of life history for birds. Again, for the fast-slow axes we weighted the
+PCs scores by the AIC based weight for all models and also using the PCs in the
+best models only. The averaged scores of the fast-slow axes where then used to
+predict adult elasticities and generation time to compare the performance
+against the scores of single PCs.
 
 
 \section{Results}
 
 The observed hypervolume based on the 9 non-redundant life history traits is 
 much smaller than the hypervolumes predicted by the null models (p-value = 
-0.001, see table \ref{tab:tabApp2.1.1}). The closest null model, 
-$hv_{nm4}$, is the one that imposes a correlation among traits as observed but 
-still 7 times larger than the hypervolume of the observed data. The smaller 
-size and aggregation in the hypervolume indicate that not all trait 
-combinations are possible, consistent with the existence of constrains and 
-trade-offs in the life history evolution. The observed aggregation of species 
-is greater for the observed traits than the expected for each $hv_{nm}$
-\ref{tab:tabApp2.1.2}. Thus, the existing diversity of life history strategies
-seems restricted to certain combinations of correlated traits and shows a
-greater concentration in the trait space than expected under multivariate
+0.001, see table \ref{tab:table2.2}). The closest null model, $hv_{nm4}$, is 
+the one that imposes a correlation among traits as observed but still 7 times 
+larger than the hypervolume of the observed data. The smaller size and 
+aggregation in the hypervolume indicate that not all trait combinations are 
+possible, consistent with the existence of constrains and trade-offs in the life 
+history evolution. The observed aggregation of species is greater for the 
+observed traits than the expected for each $hv_{nm}$ (table 
+\ref{tab:table2.2}). Thus, the existing diversity of life history strategies 
+seems restricted to certain combinations of correlated traits and shows a 
+greater concentration in the trait space than expected under multivariate 
 normality.
+
+\begin{table}
+\center
+\caption[Species' concentration and hypervolumes]{The world's bird species are
+concentrated in nine-trait space as compared to expectations under theoretical
+null models and fills a much more restricted hypervolume. Minimum number of 
+cells within nine-trait multivariate space (divided in $10^{6}$ cells) needed to
+cover 10\% (N10) or 50\% (N50) of species in the observed hypervolume 
+($Hv_{obs}$) and in four different null-model simulated hypervolumes 
+($Hv_{nm1-4}$) and the volume of each hypervolume (the mean of the 999 
+permutations for $Hv_{nm}$). See main text for details.}
+\label{tab:table2.2}
+\begin{tabular}[b]{@{}lccc@{}}
+\toprule
+\textbf{Hypervolume} & \textbf{N10} & \textbf{N50} & \textbf{Volume} \\
+\midrule
+$Hv_{obs}$  & 9   & 71  & 4.3 \\
+$Hv_{nm1}$  & 131 & 354 & 1030450 \\
+$Hv_{nm2}$  & 131 & 397 & 10808.4 \\
+$Hv_{nm3}$  & 131 & 394 & 8187 \\
+$Hv_{nm4}$  & 131 & 312 & 30.6 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 From the 7631 trait combinations, including single traits, the selected PCs 
 scores from the PPCAs combining sets of traits, and other metrics used to 
 describe the fast-slow continuum in the literature, 104 where among 
 the ones that better predict elasticities for adult survival ($\Delta AIC < 2$),
 while for predicting generation time 468 trait combinations where among the
-bests (see \href{TODO}{FS\_modelSelection.xlsx in the ESM}). All the best
-%TODO: add url to ESM
-predictors are PCs scores except for the single trait clutch size that is also
-part of the best predictors for the elasticity of the adult survival.
+bests. All the best predictors are PCs scores except for the single trait clutch
+size that is also part of the best predictors for the elasticity of the adult
+survival.
 The best PCs come from PPCA with $5.9 \pm 1.3$ combined traits for adult 
 survival elasticities and $6.2 \pm 1.3$ for generation time. The variance 
 explained by the PCs account for $54\% \pm 0.008$ of the variance of the traits 
 sets selected for the elasticities of adult survival and $48\% \pm 0.008$ 
 for the trait sets selected for generation time. Here we report the results for 
 the restricted life history dataset using the phylogeny based on the Hackett 
-backbone, see \ref{ch:Appendix2.1} for the details of the extended life 
-% TODO: check appendix and ESM references and define tables
-%   check vignette for tables or boxplots
-history dataset and the phylogeny based on the Ericson backbone.
+backbone, see table \ref{tab:tabApp2.1.1} for the details of the extended life
+history dataset and the models with the phylogeny based on the Ericson backbone.
 
-Although single traits are often used as surrogate for the FS, no single 
-trait appears among the best models for neither elasticity nor generation time 
-(Supplementary table S3). The ratio FEC / AFB, which has also been suggested to 
-accurately describe the FS \citep{Oli2004}⁠, is not among the best traits, 
-alone or in combination, that better explains adult survival elasticities 
-($\Delta$AIC = 85.6) nor generation time ($\Delta$AIC = 10.2). 
+Although single traits are often used as surrogate for the fast-slow axis, only
+CL appears among the best models for elasticity of the adult survival ($\Delta
+AIC = 0.6$ ) and no single trait for generation time (see
+\href{https://github.com/jmaspons/Thesis/tree/master/ESM/chapter02}{
+FS\_modelSelection.xlsx in the ESM}). The ratio FEC / AFB, which has also been
+suggested to accurately describe the fast-slow axis \citep{Oli2004}⁠, is not
+among the best traits, alone or in combination, that better explains adult
+survival elasticities ($\Delta$AIC = 85.6) nor generation time ($\Delta$AIC =
+10.2).
 
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{./Figures/chapter02/fig2-FSaxes.png}
 \caption[Fast-Slow PC loadings]{
 Importance of the traits describing the fast-slow continuum. Top panel: Loadings 
-mean $\pm$ SD of the selected PCs combining sets of life history traits that 
+mean $\pm$ standard deviation of the selected PCs combining sets of life history traits that
 better describe the fast-slow axis. Bottom panel: Relative weight of the life 
 history traits in the fast-slow continuum. Values range from -1 to 1, where 
 negative values means that the absolute value of the trait loadings are lower 
 than expected by the frequency of the trait and positive values for traits with 
 higher loadings than expected by the frequency of the trait in the selected 
-PCA (see main text for details). The loadings and frequencies com from 
-selected PCs that better predict elasticities of the adult survival or 
-generation time, weighted by the AIC based weight of the models taking all or 
-only the models with $\Delta AIC < 2$ (best AIC).}
+PPCAs (see main text for details). The loadings and frequencies come from the
+selected PCs that better predict elasticities of the adult survival (FSe) or
+generation time (FSgt), weighted by the AIC based weight of the models taking
+all or only the models with $\Delta AIC < 2$ (best AIC).}
 \label{fig:fig2.2}
 \end{figure}
 
 
 Figure \ref{fig:fig2.2} shows the loadings of each life history trait in the 
-best
-FS axes, for both elasticities and generation time. In both cases, the life 
-history traits with higher and consistent weights include CS and AFB. 
+best fast-slow axes, for both elasticities and generation time. In both
+cases, the life history traits with higher and consistent weights include CS and
+AFB.
 However, there are two main differences. First, incubation period is more 
 influential for the axis based on generation time than for those based on 
 elasticities. Second, FEC seems more important for PCs selected to 
@@ -411,44 +437,52 @@ predict generation time. Other traits in selected PCs have huge variability
 (see SD bars in figure \ref{fig:fig2.2} and depends on whether all models or 
 only the best ones ($\Delta AIC < 2$) are used to weight the PC. Other traits 
 commonly included in the fast-slow axis such as LFS or BM seems unrelated to 
-the demographically defined fast-slow axis defined by our methodology.
+the demographically defined fast-slow axis defined by our methodology. The
+results for the extended dataset and the Ericson backbone based phylogeny
+doesn't change the patterns (see tables \ref{tab:tabApp2.1.2},
+\ref{tab:tabApp2.1.3} and figures \ref{fig:figApp2.1.1}, \ref{fig:figApp2.1.2}).
 
 One advantage of combining all PPCA in single weighted-average axes is that it 
-allows estimating the position of a species in the FS even when some scores 
-cannot be estimated due to missing data for life history traits combined in a 
-PPCA. We thus estimated the fast-slow continuum for up to 1516 species for each 
-respective axis. The two 
-estimated FS axes (FSe and FSgt) are highly correlated with each other 
-(Phylogenetic correlation =  0.85 and 0.74 for all or best models 
-only, n = 797 species), are only weakly correlated 
-with body mass (Phylogenetic correlations = 0.5 and 0.34, respectively) and 
-exhibits substantial phylogenetic effects ($\lambda > 0.95$).
+allows to estimate the position of a species in the fast-slow axis even when
+some scores cannot be estimated due to missing data for life history traits
+combined in a PPCA. We thus estimated the fast-slow continuum for up to 1516
+species for each respective axis.
+The two estimated fast-slow axes (FSe and FSgt) are highly correlated with each
+other (phylogenetic correlation =  0.85 and 0.74 for all or best models
+only, n = 797 species), are only weakly correlated with body mass (phylogenetic
+correlations = 0.5 and 0.34, respectively) and exhibits substantial phylogenetic
+effects ($\lambda > 0.95$).
 
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{./Figures/chapter02/fig3-Secondary axes.png}
 \caption[Alternative axes groups and PC loadings]{
-Importance of the traits for clusters of similar significant PCs not present in 
-the FS axes. Each group contains PCs with scores correlation greater than the 
-correlation specified in the group name in the inset dendogram (e.g. grCor0.8 
-means correlation \textgreater{0.8}). Top panel: Loadings mean $\pm$ SD for the 
-traits of each group of PCs. Bottom panel: Relative weight of the life history
-for each group of PCs (see figure \ref{fig:fig2.2} for details).}
+Importance of the traits for clusters of similar significant PCs not selected
+for the fast-slow axes. Each group contains PCs with scores correlation greater
+than the correlation specified in the group name in the inset dendogram (e.g.
+grCor0.8 means correlation \textgreater{0.8}). Top panel: Loadings mean $\pm$
+standard deviation for the traits of each group of PCs. Bottom panel: Relative
+weight of the life history for each group of PCs (see figure \ref{fig:fig2.2}
+for details).}
 \label{fig:fig2.3}
 \end{figure}
 
 Although the PCs representing fast-slow continuum explains around 50\% of the 
 variation in life history traits, much variation still remains to be explained.
 To explore thus variation, we extracted all the PCs with Eigenvalue
-\textgreater{1} among the
+\textgreater{1} (Kaiser-Guttman criterion) among the
 %TODO: cite Kaiser criterion (Legendre P, Legendre L (2012) Numerical Ecology 
 % (Elsevier, London), 3rd Ed, p 1006)
-PCs not selected as descriptors of the Fast-slow continuum, and classified them 
-in eight groups based on a cluster analyses of species scores (fig.
-\ref{fig:fig2.3}). These clusters classify together PCs that represent similar
-life history axes, which may then be interpreted by examining their traits
-loadings. The averaged loadings of these groups suggest at least three axes of
-life history variation that are independent of the fast-slow continuum.
+PCs not selected as descriptors of the fast-slow continuum, and classified them
+in groups based on a cluster analyses of species scores (fig. \ref{fig:fig2.3}).
+These clusters classify together PCs that represent similar life history axes,
+which may then be interpreted by examining their traits loadings. The averaged
+loadings of these groups suggest at least three axes of life history variation
+that are independent of the fast-slow continuum.
+
+% TODO: axes' characteristics
+\ref{tab:tabApp2.1.4}
+
 The most important one in terms of variance explained is the degree of
 iteroparity (grCor0.75\_18, grCor0.7\_43 and grCor0.75\_29 in figure
 \ref{fig:fig2.3}), quantified as the brood value index \citep{Bokony2009}⁠,
@@ -465,10 +499,28 @@ grCor0.75\_19 in figure \ref{fig:fig2.3}), with species laying few eggs yet
 relatively large at one extreme and species laying many eggs of small size at
 the other extreme. The 4th axes, grCor0.8\_5 in \ref{fig:fig2.3} is related to
 PEP, PRO and FEC and reflect the productivity of the species in terms of
-investment in reproduction. This axis is correlated with FSgt (-0.73).
+investment in reproduction. This axis is correlated with FSgt (-0.73). See table
+\ref{tab:tabApp2.1.5}, \ref{tab:tabApp2.1.6} and figure \ref{fig:figApp2.1.3},
+\ref{fig:figApp2.1.4}, \ref{fig:figApp2.1.5} for the details of the extended
+dataset and Ericson backbone based phylogeny.
+% TODO: Compare alternative axes from different subsets
 
 % TODO: phylogenetic signal
-Scores for all described axes are available in the ESM. % TODO: add URL
+\ref{tab:tabApp2.1.7}
+
+% TODO: move at the end of the section and compare with alternative axes
+The two estimated fast-slow axes (FSe and FSgt) are highly correlated with each
+other (phylogenetic correlation =  0.85 and 0.74 for all or best models
+only, n = 797 species), are only weakly correlated with body mass (phylogenetic
+correlations = 0.5 and 0.34, respectively) and exhibits substantial phylogenetic
+effects ($\lambda > 0.95$).
+
+% TODO: correlation among axes
+\ref{tab:tabApp2.1.8} compare axes FS-alternative
+
+Scores for all described axes are available at
+\href{https://github.com/jmaspons/Thesis/tree/master/ESM/chapter02}{LHT-axes.
+xlsx in the ESM}.
 
 
 \section{Discussion}
@@ -556,7 +608,7 @@ environmental changes. The provided axes of life history variation can open
 further studies to elucidate the links between environmental condition and the
 evolution of life history strategies.
 
-\section*{Electronic Suplementary Material}
+\section*{Electronic Supplementary Material}
 
 Electronic supplementary material is available online at
-\url{https://github.com/jmaspons/Thesis/...} % TODO: upload and link
+\url{https://github.com/jmaspons/Thesis/tree/master/ESM/chapter02}.
