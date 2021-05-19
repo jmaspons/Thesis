@@ -136,7 +136,7 @@ the offspring.
 We assembled published information on the 14 life history traits most often used
 to describe the fast-slow continuum (Table \ref{tab:table2.1}). These traits
 describe adult quality (LFS, RLS, AFB), juvenile quality (DP, I, FLE, EMR,
-OV), and the number of offspring (FEC, CS, PRO, PEP), iteroparity (BV), and body
+OV), the investment in offspring (FEC, CS, PRO, PEP), iteroparity (BV), and body
 mass (BM). We found information of the 14 life history traits for 
 \textgreater{6700} species (full life history dataset; see Table 
 \ref{tab:table2.1} for details), and complete information for 797 species 
@@ -467,10 +467,11 @@ Importance of the traits for clusters of similar significant PCs not selected
 for the fast-slow axes. Each group contains PCs with scores correlation greater
 than the correlation specified in the group name in the inset dendogram (e.g.
 gr0.8 means correlation \textgreater{0.8}). Boxes include clusters with a
-correlation among averaged loadings \textgreater{0.95}. Top panel: Loadings
-mean $\pm$ standard deviation for the traits of each group of PCs. Bottom
-panel: Relative weight of the life history for each group of PCs (see figure
-\ref{fig:fig2.2} for details).}
+correlation among averaged loadings \textgreater{0.95} and can be conceptualized
+as EMR in the black box, lifelong productivity in the green box and iteroparity
+in blue and red boxes. Top panel: Loadings mean $\pm$ standard deviation for the
+traits of each group of PCs. Bottom panel: Relative weight of the life history
+for each group of PCs (see figure \ref{fig:fig2.2} for details).}
 \label{fig:fig2.3}
 \end{figure}
 
@@ -510,13 +511,12 @@ The PCs in this group explains $0.15 \pm 0.02$ \% of the variance and the main
 trait in this axis is EMR, followed by PRO and CS.
 
 The third axes, gr0.8\_5 in figure \ref{fig:fig2.3} is related to PEP, PRO, FEC
-and OV and reflects the productivity of the species in terms of investment in
-reproduction. This axis is similar to the FSgt axis.
+and OV and reflects the lifelong productivity of the species in terms of
+offspring number and egg mass produced relative to the body size.
+% This axis is similar to the FSgt axis.
 % The loadings and relative weight of OV, LFS, I, FLE AFB and BM are low
 % on average but the scores of this axis are correlated with this traits
 % (correlation for LFS = 0.35, I = -0.43, FLE -0.36, AFB = -0.35 and BM = -0.35).
-% All in all, this axis seems to sort highly fecund and small species with fast
-% development in one end and,
 
 The axes described appears consistently regardless of the phylogeny and dataset
 used. See tables \ref{tab:tabApp2.5}, \ref{tab:tabApp2.6} and figures
@@ -525,7 +525,7 @@ the extended dataset and Ericson backbone based phylogeny.
 
 Most of the described axes exhibit high phylogenetic signal (Pagel's
 $\lambda > 0.9$) except for the axes from the iteroparity group with Pagel's
-$\lambda = 0.66 \pm 0.09$ and the PEP group with Pagel's
+$\lambda = 0.66 \pm 0.09$ and the lifelong productivity group with Pagel's
 $\lambda = 0.89 \pm 0.01$ (see table \ref{tab:tabApp2.7} for details).
 
 The two estimated fast-slow axes (FSe and FSgt) are correlated with each
@@ -537,9 +537,10 @@ on the correlation between FSgt and FSe when includes all or only the best PCs,
 suggest that BM decrease the accuracy of the PCs on predicting generation time
 or the elasticity of the adult survival. In fact, there is zero PPCA containing
 BM among the best models for FSe and only 3 from 487 for FSgt. The correlation
-among other axes than FS, is quite low except for PEP axes and FSgt (-0.76) and
-for PEP axes and iteroparity axes (mean correlation $0.76 \pm 0.11$). See table
-\ref{tab:tabApp2.8} for detailed correlations among axes and traits.
+among other axes than FS, is quite low except for the lifelong productivity axis
+and FSgt (-0.76) and for the lifelong productivity axis and iteroparity axes
+(mean correlation $0.76 \pm 0.11$). See table \ref{tab:tabApp2.8} for detailed
+correlations among axes and traits.
 
 Scores for all described axes are available at
 \href{https://github.com/jmaspons/Thesis/tree/master/ESM/chapter02}{LHT-axes.
@@ -588,10 +589,13 @@ on the same PC. However, a low brood value may also be achieved by reproducing
 multiple times during a same breeding season, a strategy that is used by some
 pigeons and starlings.
 
-Other previously suggested life history axes that appear consistently
-once the fast-slow continuum is factored out are related to the duration of the
+Other previously suggested life history axis that appear consistently in mammals
+once the fast-slow continuum is factored out is related to the duration of the
 development and the trade-off between offspring quantity and quality
-\citep{Promislow1990,Bielby2007,Dobson2007} which resembles our PEP axis group.
+\citep{Promislow1990,Bielby2007,Dobson2007}. We didn't find a similar axis in
+birds and it seems that this trade-off is included in our fast-slow axes, with
+fast lived species investing in many and low quality offspring while slow
+species invest in few but high quality offspring.
 
 Much of the ecological relevance of the fast-slow continuum resides in its 
 influence on population dynamics under challenging conditions, an issue 
