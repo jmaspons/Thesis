@@ -23,10 +23,10 @@
 \title{Life History, Behaviour and Responses to Environmental Changes} % Thesis title
 
 \author{Joan Maspons Ventura % Author name
-  \href{https://orcid.org/0000-0003-2286-8727}{\includegraphics[width=8pt,keepaspectratio=true]{Figures/cover/orcid_16x16.png}}
+  \href{https://orcid.org/0000-0003-2286-8727}{\includegraphics[width=8pt,keepaspectratio=true]{./Figures/intro/orcid_logo.png}}
 }
 
-\date{March 2021} % The date
+\date{Juny de 2021} % The date
 
 \newcommand{\institution}{Universitat Autònoma de Barcelona\xspace} % University/institution name
 
@@ -50,8 +50,7 @@
 \renewcommand{\maketitlehooka}{
 \centering
 % institution logo(s)
-%\includegraphics[width=7cm]{Figures/intro/UAB_logo_color}\\[.8cm]
-\includegraphics[width=.75\textwidth]{Figures/intro/CREAF-UAB.png}\\[.8cm]
+\includegraphics[width=.75\textwidth]{./Figures/intro/CREAF-UAB.png}\\[.8cm]
 \institution\\ % Print institution name
 \emph{\department}\\[.2cm] % Print department name
 DOCTORAT EN ECOLOGIA TERRESTRE % Degree or other information
@@ -65,15 +64,15 @@ DOCTORAT EN ECOLOGIA TERRESTRE % Degree or other information
 Directors:\\
 \textbf{Dr. Daniel Sol Rueda}\\ % Director's name
 \textbf{Dr. Roberto Molowny Horas}\\[.3cm] % Director's name
-Advisors:\\
+Comissió de seguiment:\\
 \textbf{Dr. Maria Mayol Martínez}\\ % Advisor's/supervisor's name
 \textbf{Dr. Frederic Bartomeus Ferré}\\ % Advisor's/supervisor's name
 \textbf{Dr. Javier Retana Alumbreros}\\[.3cm] % Advisor's/supervisor's name
-Supervisor of the Doctoral Program:\\
+Supervisora del programa de doctorat:\\
 \textbf{Dr. Anna Ávila Castell} % Doctoral program supervisor's name
 \end{flushleft}
 \vfill}
-\preauthor{\begin{flushright}Doctoral Dissertation of:\\\bfseries} % Text prior to the author name - right aligned and bold
+\preauthor{\begin{flushright}Memòria presentada per:\\\bfseries} % Text prior to the author name - right aligned and bold
 \postauthor{\end{flushright}} % After the author name, stop right alignment
 
 %----------------------------------------------------------------------------------------
@@ -93,57 +92,121 @@ Supervisor of the Doctoral Program:\\
 %----------------------------------------------------------------------------------------
 
 \selectlanguage{catalan}
+
+\vspace*{.4\textheight}
+
+\begin{flushright}
+Per la Teresa
+\end{flushright}
+
+
+\cleardoublepage
+
 \section*{Agraiments}
 
+% TODO: Agraiments
 
-\selectlanguage{english}
-\section*{Acknowledgements}
-...
-% All human endeavours are collaborative, we all grow when surrounded by the ones we love and admire. This thesis carries, directly or indirectly, the imprint of many people that have shared with me parts of this journey. Academically, I am extremely grateful to Roberto and Miguel, for their help and advice throughout these years. At CREAF-UAB, I would like to thank the whole team for such a great atmosphere, and in particular Pep Piñol, Raúl García-Valdés, Jordi Martínez-Vilalta, Miquel Ninyerola, Llorenç Sáez and Mariona Ferrandiz for offering me the opportunity to participate in teaching activities, and Yolanda Melero and Alberto Navarro for collaborating in these duties.
-% 
-% Dominique Gravel has been immensely helpful in the last part of the thesis, and I am honored to have been able to collaborate with him. Huge thanks also to the whole team at Sherbrooke, in particular to Guillaume Blanchet, who made everything easier during my stay.
-% 
-% Several other people have helped in different ways during the development of this thesis, and here I want to specially thank Manuel Mendoza, José Manuel Herrera, and Pipo Roces.
-% 
-% Aside from the colleagues who have helped me along the way, I think it's necessary to acknowledge the work of many people from which I have benefited. Publicly available ecological datasets such as the ones used in chapter 4 are the result of the effort of countless technicians and volunteers, alongside researchers. Likewise, the R community and, in general, the open software movement, have shown me that it is completely possible to develop robust, reproducible science without resorting to proprietary software at all. I am, all ecologists are, in debt with the communities that provide these basic tools and data for our work.
-% 
-% I am purposely keeping these acknowledgements in the academic side of things. At a personal level, the imprint is even more important, and I could not have carried out this thesis without the love and support of those close to me. Thanks to all of you.
+\hfill
 
 \begin{flushright}
 %\textsc{\theauthor}\\
 Can Maspons de la Vall\\
-March 2021
+Juny de 2021
 \end{flushright}
 
-\cleartoverso % Force a break to an even page
+\vspace*{\fill}
+\hrulefill
+
+Aquesta tesi ha estat finançada mitjançant una beca predoctoral per a la
+formació de personal investigador (FPI) BES-2011-043668, concedida pel
+Ministerio de Educación y Ciencia a través del projecte de recerca
+CGL2010-21838.
+
+\cleardoublepage % Force a break to an even page
+
 
 %----------------------------------------------------------------------------------------
 %	ABSTRACT
 %----------------------------------------------------------------------------------------
 
-\begin{abstract}
-
-Abstract in English
-% Organisms survive, thrive and reproduce by interacting with individuals of their own and of other species. Biotic interactions are extremely diverse in type, magnitude, or spatiotemporal scale, and give rise to ecological networks with complex topologies and dynamics. Such networks of ecological interactions have been shown to possess non-random structural properties that enhance their resilience and robustness to perturbations, and thus are key elements for understanding the response of species to external forcing such as environmental change or habitat loss.
-% 
-% Despite the importance of interaction networks in studies of ecological communities, and due in part to their sheer variability, ecological interactions are notoriously difficult to document and quantify in a comprehensive fashion. Therefore, historically, studies of ecological networks have focused on the most easily observable types of interactions, those between predators and their prey, or more generally speaking, between consumers and resources. In the last decades, studies of mutualistic networks have also risen to prominence and have demonstrated, for example, that food webs and mutualistic networks have markedly different topologies and this has both ecological and evolutionary consequences for the species involved. One of the main challenges of contemporary community ecology is to expand our understanding of networks of a single interaction type to a more realistic view of ecological communities, by considering how different interactions mutually influence community structure and functioning. In order to tackle this challenge, a first step is to lay down overarching theoretical hypotheses about such complex networks.
-% 
-% In this thesis I approach this general objective and analyse a series of fundamental questions about ecological networks. After a general introduction, first I synthesise current methodologies for developing theoretical network models. I find that three main conceptual approaches have been used, and discuss their relative strengths, weaknesses, and potential uses. Second, I study whether species persistence in model communities is influenced by the frequency and distribution of the different interaction types. The prevalence of positive interactions within a community is shown to be key for species-poor communities, whereas in more speciose communities, different combinations of interactions can occur without affecting species persistence in a significant way. Furthermore, networks with randomly distributed interactions show less species persistence than structured networks. If community structure is important for species persistence, it follows that other community-level patterns should also be affected by it. In the fourth chapter, I focus on Species Abundance Distributions (SADs), one of the most studied patterns in community ecology, and ask whether their shape varies in a consistent way for the different trophic guilds of a community. I compare theoretical expectations with SADs from empirical datasets, and find that SADs of plant communities are significantly less even and more skewed than SADs from mammal ones. Among mammal trophic guilds, there are no significant differences in the evenness or skewness of their SADs. These first chapters deal with the structure and dynamics of closed communities, aiming to establish baseline hypotheses. In the fifth chapter, I incorporate another degree of complexity, namely the spatial perspective. Specifically, I analyse how interaction effects are propagated in space, such that interactions occurring in a local community may influence other communities connected to it by means of dispersing or foraging individuals. Given the novelty of this analysis and the long tradition of food web models, in this chapter I focus on trophic communities as a simplified model system. I find that the distribution of net effects of a species over another across the metacommunity is significantly different if the local communities are connected by dispersal, foraging, or a mixture of both. In the sixth chapter, I tackle the long-standing question of the variability of species interactions across environmental gradients. For approaching this question, I recover the distinction, originally proposed by G.E. Hutchinson, about scenopoetic and bionomic environmental factors, i.e. non-resource and resource factors. By recognizing that these two types of environmental factors have different effects on species fitness and on the importance of species’ pairwise interactions, I analyse the prevalence of positive and negative interactions in model communities across a two-dimensional environmental gradient with one resource and one non-resource factor. I find that, according to the expectations, positive interactions respond to the non-resource factor, whereas negative interactions vary across the two axis of the gradient, with consequences for average persistence time and species diversity across the combined gradient.
-
-\end{abstract}
-
-
 \selectlanguage{catalan}
-\renewcommand{\catalanabstractname}{Resum}
+% \renewcommand{\catalanabstractname}{Resum} % to avoid installing texlive-lang-spanish for babel-catalan
 
 \begin{abstract}
-Resum en català
+A la natura trobem una extraordinària diversitat d'estratègies vitals, les
+diferents maneres en què les espècies optimitzen els seus recursos limitats en
+els diferents components de l'eficàcia biològica, com ara la reproducció, el
+desenvolupament o la supervivència.
+En un mon canviant com el nostre, oimés en un context de canvis ambientals
+ràpids induïts pels humans, és de vital importància entendre com les espècies
+poden adaptar-se a les noves condicions tenint en compte les restriccions de
+l'evolució dels trets deguts a la història filogenètica i als balanços entre els
+diferents trets.
+El marc teòric de les estratègies vitals permet veure de forma integrada
+l'evolució dels trets de les espècies en funció de les pressions de selecció de
+l'ambient.
+En el cas dels animals, una forma que tenen de fer front als canvis és
+mitjançant la plasticitat del comportament, que recentment s'ha vist que està
+lligada a les estratègies vitals en el què anomenem síndromes del ritme de vida.
+
+L'objectiu d'aquesta tesi és contribuir a entendre com les espècies responen
+als canvis i quin paper hi juguen les estratègies vitals i el comportament.
+En el primer capítol, descric els principals eixos de variació de les
+estratègies vitals en ocells posant èmfasi en els efectes demogràfics de l'eix
+ràpid-lent (\textit{fast-slow} en anglès) i descrivint altres eixos menys
+estudiats com ara la iteroparitat o la mida relativa dels ous (Capítol
+\ref{ch:LHaxes}).
+A continuació, exploro els efectes i les interaccions entre les estratègies
+vitals i el comportament en un context de canvi ambiental mitjançant un model
+estocàstic basat en individus que mostra que els beneficis de l'aprenentatge
+són contingents a l'estratègia vital (Capítol \ref{ch:LH-Behaviour model}).
+Finalment, descric l'existència d'interaccions entre estratègies vitals i el
+comportament mitjançant mètodes comparatius amb dades d'ocells que mostren que
+les espècies de vida lenta tendeixen a prendre menys riscos i, alhora,
+aquest comportament és flexible i s'ajusta quan es troben en nous ambients com
+ara les àreas urbanes (Capítol \ref{ch:POLS}).
+
 \end{abstract}
+
+\clearpage
 
 \selectlanguage{english}
 
+\begin{abstract}
+In nature we find an extraordinary diversity of life history strategies, the
+different ways in which species optimize their limited resources in different
+components of the fitness, such as reproduction, development or survival.
+In a changing world like ours, even more in a context of human-induced
+rapid environmental change, it is vital to understand how species can adapt to
+the new conditions taking into account the constraints of
+the evolution of traits due to phylogenetic history and trade-offs between
+different traits.
+The framework of the life history theory allows us to view the evolution of
+species traits in an integrated way as a function of the selection pressures
+from the environment.
+In the case of animals, one way they have to deal with changes is
+through the plasticity of behavior, which has recently been seen to be linked
+to the life histories in what we call peace of life syndromes.
+
+The aim of this thesis is to contribute to the understanding of how species
+respond to changes and what is the role of the life histories and behavior.
+In the first chapter, I describe the main axes of variation of the life history
+in birds emphasising the demographic effects of the fast-slow axis and
+describing other less studied axes such as the iteroparity or the relative egg
+size (Chapter\ref{ch:LHaxes}).
+Then, I explore the effects and the interactions between life history and
+behaviour in a context of environmental change using a stochastic individual
+based model showing that the benefits of learning are contingent on life
+history (Chapter \ref{ch:LH-Behaviour model}).
+Finally, I describe the existence of interactions between life history and
+behaviour by means of comparative methods using bird's data showing that
+slow-lived species tend to be more risk-averse and, at the same time,
+this behaviour is plastic and is adjusted in new environments like urban areas
+(Chapter \ref{ch:POLS}).
+\end{abstract}
+
 \clearpage
-%\cleartoverso % Force a break to an even page
+% \cleartoverso % Force a break to an even page
 
 %----------------------------------------------------------------------------------------
 %	chapter status
@@ -160,33 +223,52 @@ Resum en català
   
   \item \textbf{Chapter 4:} \\
   Sol, D., J. Maspons, A. Gonzalez-Voyer, I. Morales-Castilla, L. Z. Garamszegi, A. P. M\o{}ller. 2016 Risk-taking behavior, urbanization and the pace of life in birds. \textit{Behav. Ecol. Sociobiol}. 72, 59. \href{http://dx.doi.org/10.1007/s00265-018-2463-0}{doi:10.1007/s00265-018-2463-0}
-  %TODO: CHAPTER 5?
+
+  %TODO: \item \textbf{Chapter 5:} \\ Life history and environment
 \end{itemize}
 
+\bigskip
 
-Life History, Behaviour and Responses to Environmental Changes © 2021 by Joan Maspons is licensed under CC BY-NC-SA 4.0. To view a copy of this license, visit \url{https://creativecommons.org/licenses/by-nc-sa/4.0/}.
+\begin{center}
+ \includegraphics{./Figures/intro/CC_BY-NC-SA.png}
+\end{center}
 
-% N.B.: the code used to generate the results of the different chapters is in the process of being cleaned up, and will be uploaded in its entirety to a public repository, at https://github.com/DavidGarciaCallejas/. As of 20/09/2018, most of the functions related to the model of chapter 3, and the full R code for replicating the results of chapters 4, 5, and 6, are already available. Likewise, the latex files for generating this document are also available. The illustrations for the heading pages of the chapters are all in the public domain, and the authors/name of the works are:
+\textbf{CAT:} Life History, Behaviour and Responses to Environmental Changes © 2021 per Joan
+Maspons Ventura està subjecta a una llicència
+Reconeixement-NoComercial-CompartirIgual 4.0 Internacional de Creative Commons.
+Per veure una copia d'aquesta llicència, visiteu
+\url{https://creativecommons.org/licenses/by-nc-sa/4.0/}.
 
-% \begin{itemize}
-% \item Introduction: Haboku Sansui, by Sesshū Tōyō
-% \item Chapter 2: El Perro, by Francisco de Goya
-% \item Chapter 3: Street art by El Niño de las Pinturas
-% \item Chapter 4: Street art by El Niño de las Pinturas
-% % \item Chapter 5: Crow and the Moon, by Kawanabe Kyōsai
-% \item General Discussion: Photograph of a road in Nicaragua, taken by the author
-% \end{itemize}
+\medskip
 
-\clearpage
+\textbf{ENG:} Life History, Behaviour and Responses to Environmental Changes © 2021 by Joan
+Maspons Ventura is licensed under a Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy
+of this license, visit \url{https://creativecommons.org/licenses/by-nc-sa/4.0/}.
+
+
+\bigskip
+
+The \LaTeX code to generate this document is available at
+\url{https://github.com/jmaspons/Thesis}.
+
+
+% TODO: The cover image is a public domain resource from TODO, and the authors/name of the works are
+
+
+\cleardoublepage % Force a break to an even page
 
 %----------------------------------------------------------------------------------------
 %	TABLE OF CONTENTS
 %----------------------------------------------------------------------------------------
 
-\tableofcontents* % Print the table of contents
+\currentpdfbookmark{Table of contents}{Contents} % creates a pdf bookmark at the current level
 
-%\cleartoverso % Force a break to an even page
+\tableofcontents* % Print the table of contents & don't show Contents section (*)
+
+% \cleartoverso % Force a break to an even page
 \clearpage
+
 %----------------------------------------------------------------------------------------
 %	LIST OF FIGURES
 %----------------------------------------------------------------------------------------
@@ -238,7 +320,7 @@ Life History, Behaviour and Responses to Environmental Changes © 2021 by Joan M
 \include{Chapters/Chapter02}
 \include{Chapters/Chapter03}
 \include{Chapters/Chapter04}
-\include{Chapters/Chapter05}
+% \include{Chapters/Chapter05}
 \include{Chapters/Chapter06_discussion}
 
 \backmatter
@@ -248,22 +330,22 @@ Life History, Behaviour and Responses to Environmental Changes © 2021 by Joan M
 %----------------------------------------------------------------------------------------
 %	APPENDICES
 %----------------------------------------------------------------------------------------
+
 \include{Chapters/Appendix_2_1}
-% \include{Chapters/Appendix_2_2}
-% \include{Chapters/Appendix_2_3}
-% 
+
 \include{Chapters/Appendix_3_1}
 \include{Chapters/Appendix_3_2}
-% 
+
 \include{Chapters/Appendix_4_1}
-% 
+
 % \include{Chapters/Appendix_5_1}
-% 
+
 % \include{Chapters/Appendix_6_1}
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
+
 % References - set bibliography style
 \bibliographystyle{amnat}
 %\bibliographystyle{plainnat} % Use the plainnat bibliography style
@@ -276,7 +358,7 @@ Life History, Behaviour and Responses to Environmental Changes © 2021 by Joan M
 %	INDEX
 %----------------------------------------------------------------------------------------
 
-\printindex % Print the index
+% \printindex % Print the index
 
 %----------------------------------------------------------------------------------------
 
