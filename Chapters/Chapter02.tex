@@ -71,14 +71,13 @@ expectancy” (slow-lived) strategy at the other end. Despite being one of the
 most studied and influential axes of life history variation, there are notorious
 discrepancies regarding how to define and quantify it across species. Indeed, at
 least twelve different life history traits have been used to this purpose either
-alone or in combination
-often being chosen based on data availability rather than on biological
-significance. For example, many studies describe the fast-slow continuum based
-on surrogates of fecundity like clutch, litter size or productivity, ignoring
-that a high reproductive effort has high costs in terms of survival
-\citep{Adler2014}. Inconsistencies in the treatment of body size in previous
-studies have also been shown to profoundly affect the quantification of the
-fast-slow continuum \citep{Jeschke2009}.
+alone or in combination often being chosen based on data availability rather
+than on biological significance. For example, many studies describe the
+fast-slow continuum based on surrogates of fecundity like clutch, litter size
+or productivity, ignoring that a high reproductive effort has high costs in
+terms of survival \citep{Adler2014}. Inconsistencies in the treatment of body
+size in previous studies have also been shown to profoundly affect the
+quantification of the fast-slow continuum \citep{Jeschke2009}.
 Although many life history traits scale with body size, it is unclear whether
 body size should be considered part of the fast-slow continuum (e.g. because
 being larger improves survival) or should instead be factored out because it
@@ -92,7 +91,7 @@ The difficulties regarding how to define the fast-slow continuum across species
 may come as a surprise given that early works are clear in describing it as the
 result of the impossibility to simultaneously maximize survival and fecundity
 \citep{Stearns1983a, Saether1988}. This means that the fast-slow continuum needs
-to be understood in the context of the full lifecycle of a species. The
+to be understood in the context of the full life cycle of a species. The
 assessment of the relative sensitivity (i.e. elasticity) of population growth to
 changes in fecundity and adult survival may be useful for this purpose, as it
 helps describe the fecundity-survival trade-off. Thus, a slow-lived strategy
@@ -142,11 +141,13 @@ We assembled published information on the 14 life history traits most often used
 to describe the fast-slow continuum (Table \ref{tab:table2.1}). These traits
 describe adult quality (LFS, RLS, AFB), juvenile quality (DP, I, FLE, EMR,
 OV), the investment in offspring (FEC, CS, PRO, PEP), iteroparity (BV), and body
-mass (BM). We found information of the 14 life history traits for 
-\textgreater{6700} species (full life history dataset; see Table 
-\ref{tab:table2.1} for details), and complete information for 797 species 
-(restricted life history dataset). All traits were log-transformed except BV, 
-OV and EMR.
+mass (BM). We only factored out the body mass by taking the residuals of a log
+transformed and phylogenetically controlled model for egg mass as it was the
+only trait with an $R^2 > 0.7$. We found information of the 14 life history
+traits for \textgreater{6700} species (full life history dataset; see Table
+\ref{tab:table2.1} for details), and complete information for 797 species
+(restricted life history dataset). All traits were log-transformed except BV, OV
+and EMR.
 
 
 \begin{table}
@@ -174,6 +175,7 @@ Body mass                     & BM           & Weight                           
 \bottomrule
 \end{tabular}
 \end{table}
+
 
 \subsection*{Restrictions in the life history traits space}
 
@@ -252,16 +254,16 @@ number of offspring. A total of 10080 combinations of traits were used in the
 PPCAs, from which 2464 were discarded due to unsatisfactory convergence, 
 resulting in 7616 trait combinations with a proper PPCA. For each PPCA, we 
 selected the Principal Component (PC) that better match the demographic traits 
-($\Delta AIC = 0$) and flipped the axis when 
-needed, multiplying the PC scores and loadings by -1 in order to sort the 
-species from fast (negative values) to slow (positive values).
+($\Delta AIC = 0$) and flipped the axis when needed, multiplying the PC scores
+and loadings by -1 in order to sort the species from fast (negative values) to
+slow (positive values).
 
-From all the studied traits, whether alone or combined in a PC, we 
-considered those that better explain variation in elasticities or generation 
-time as corresponding to the fast-slow axis. We tested their relative 
-importance by estimating the AIC based weight of each regression, considering 
-the best models as those with 2 units difference from the model with the lowest 
-AIC ($\Delta AIC < 2$).
+From all the studied traits, whether alone or combined in a PC, we considered
+those that better explain variation in elasticities or generation time as
+corresponding to the fast-slow axis. We tested their relative importance by
+estimating the AIC based weight of each regression, considering the best models
+as those with 2 units difference from the model with the lowest AIC
+($\Delta AIC < 2$).
 
 
 \subsection*{Defining species position on the fast-slow axes}
@@ -272,9 +274,9 @@ life history traits that accurately predicts variation in elasticities and/or
 generation time, it is possible to use the life history information to assess 
 the position in the fast-slow continuum for species for which demographic data 
 was unavailable. We defined the position of the species in the fast-slow axis 
-as the mean scores of the PCs weighted by the AIC based weights 
-of the elasticity models (FSe) and generation time models (FSgt). We did the 
-same using all selected PCs and using only the PCs of the best models only 
+as the mean scores of the PCs weighted by the AIC based weights of the
+elasticity models (FSe) and generation time models (FSgt). We did the same using
+all selected PCs and using only the PCs of the best models only
 ($\Delta AIC < 2$).
 
 Our finding that to accurately predict elasticities and/or generation time you 
@@ -473,10 +475,11 @@ for the fast-slow axes. Each group contains PCs with scores correlation greater
 than the correlation specified in the group name in the inset dendogram (e.g.
 gr0.8 means correlation \textgreater{0.8}). Boxes include clusters with a
 correlation among averaged loadings \textgreater{0.95} and can be conceptualized
-as EMR in the black box, lifelong productivity in the green box and iteroparity
-in blue and red boxes. Top panel: Loadings mean $\pm$ standard deviation for the
-traits of each group of PCs. Bottom panel: Relative weight of the life history
-for each group of PCs (see figure \ref{fig:fig2.2} for details).}
+as a offspring quality-quantity trade-off in black, lifelong productivity in
+green and iteroparity in blue and red.
+Top panel: Loadings mean $\pm$ standard deviation for the traits of each group
+of PCs. Bottom panel: Relative weight of the life history for each group of PCs
+(see figure \ref{fig:fig2.2} for details).}
 \label{fig:fig2.3}
 \end{figure}
 
@@ -486,8 +489,8 @@ FSgt best AIC, $0.35 \pm 0.07$ for FSe and $0.29 \pm 0.05$ for FSe best AIC),
 much variation still remains to be explained.
 To explore this variation, we extracted all the PCs with Eigenvalue
 \textgreater{1} (Kaiser-Guttman criterion) among the
-%TODO: cite Kaiser criterion (Legendre P, Legendre L (2012) Numerical Ecology 
-% (Elsevier, London), 3rd Ed, p 1006)
+%TODO: Kaiser criterion cite (Legendre P, Legendre L (2012) Numerical
+% Ecology (Elsevier, London), 3rd Ed, p 448)
 PCs not selected as descriptors of the fast-slow continuum, and classified them
 in groups based on a cluster analyses of the species scores (figure
 \ref{fig:fig2.3}). These clusters classify together PCs that represent similar
@@ -597,10 +600,16 @@ pigeons and starlings.
 Other previously suggested life history axis that appear consistently in mammals
 once the fast-slow continuum is factored out is related to the duration of the
 development and the trade-off between offspring quantity and quality
-\citep{Promislow1990,Bielby2007,Dobson2007}. We didn't find a similar axis in
-birds and it seems that this trade-off is included in our fast-slow axes, with
-fast lived species investing in many and low quality offspring while slow
-species invest in few but high quality offspring.
+\citep{Promislow1990,Bielby2007,Dobson2007}.
+We found a similar axis in birds, but clutch size weight is not as important as
+the relative egg mass, perhaps because PPCA impose the orthogonality among PCs
+and the fast-slow axis already include part of the variance in the clutch size
+trait. Another explanation may be that the offspring quality-quantity trade-off
+in birds is included in the fast-slow axes as found by \citet{Jeschke2009},
+with fast lived species investing in many and low quality offspring while slow
+species invest in few but high quality offspring as suggested by the fact that
+egg mass residual and offspring development time traits, such as incubation time
+and fledging period, also have some weight in the fast-slow axis.
 
 Much of the ecological relevance of the fast-slow continuum resides in its 
 influence on population dynamics under challenging conditions, an issue 
